@@ -67,22 +67,24 @@ function App() {
           <span className="icon-like"></span>
         </div>
         <div className='center-part'>
-        <span lassName="icon-shuffle-1-svgrepo-com"></span>
-        <span lassName="icon-play-and-pause"></span>
-        <span lassName="icon-play-circle"></span>
-        <span lassName="icon-play-and-pause2"></span>
-        <span lassName="icon-repeat-one"></span>
-        <div className='music-line'>
-          <div className='line'></div>
-        </div>
+          <span className="icon-shuffle-1-svgrepo-com"></span>
+          <span className="icon-play-and-pause"></span>
+          <span className="icon-play-circle"></span>
+          <span className="icon-play-and-pause2"></span>
+          <span className="icon-repeat-one"></span>
+          <div id="music-line">
+            0:18
+            <div className="line"></div>
+            3:15
+          </div>
         </div>
         <div className='right-part'>
           <span className="icon-microphone ir"></span>
           <span className="icon-queue ir"></span>
           <span className="icon-laptop ir"></span>
           <div className='sound'>
-          <span id='sound-mute' className="icon-sound-min"></span>
-          <div className='sound-line'></div>
+            <span id='sound-mute' className="icon-sound-min"></span>
+            <div className='sound-line'></div>
           </div>
         </div>
       </footer>

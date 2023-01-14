@@ -207,6 +207,64 @@ footer{
     justify-content: flex-end;
 }
 
+.center-part{
+width: 37vw;
+display: grid;
+grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 2fr;
+grid-template-rows: 1fr 1fr;
+grid-template-areas: ". icon-shuffle-1-svgrepo-com icon-play-and-pause icon-play-circle icon-play-and-pause2 icon-repeat-one ."
+                      "music-line music-line music-line music-line music-line music-line music-line";
+align-items: center;
+align-content: center;
+justify-content: center;
+}
+
+
+
+.icon-shuffle-1-svgrepo-com{
+    grid-area: icon-shuffle-1-svgrepo-com;
+    color: #b2b2b2;
+    font-size: 2vw;
+}
+.icon-play-and-pause{
+    grid-area: icon-play-and-pause;
+    color: #b2b2b2;
+    font-size: 2vw;
+}
+.icon-play-circle{
+    grid-area: icon-play-circle;
+    color: #b2b2b2;
+    font-size: 2vw;
+}
+.icon-play-and-pause2{
+    grid-area: icon-play-and-pause2;
+    color: #b2b2b2;
+    font-size: 2vw;
+}
+.icon-repeat-one{
+    grid-area: icon-repeat-one;
+    color: #b2b2b2;
+    font-size: 2vw;
+}
+#music-line{
+    grid-area: music-line;
+    font-size: 13px;
+    color: #b2b2b2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.line{
+    width: 32vw;
+    height: 4px;
+    background: white;
+    border-radius: 10px;
+}
+
+
 #sound-mute{
 font-size: 2vw;
 }
