@@ -1,3 +1,4 @@
+
 *{
   margin: 0;
   padding: 0;
@@ -52,6 +53,8 @@ nav{
 main{
   background-color:#121212; 
   grid-area: main;
+  color: white;
+  font-size: 20px;
 }
 
 footer{
@@ -70,19 +73,16 @@ footer{
   color: white;
 }
 
-nav a img{
-  width: 2vw;
+nav a .ic{
+  font-size: 1.8vw;
   margin-right: 1vw;
-}
-nav a svg{
-  width: 2vw;
-  margin-right: 1vh;
-  stroke: #b2b2b2;
 }
 
 nav a{
   text-decoration: none;
   color: #b2b2b2;
+  padding: 0.7vh 1vh;
+  margin-right: 1.5vh;
 }
 
 
@@ -102,12 +102,14 @@ nav a{
   align-content: center;
 }
 
-.home a:hover{
+.main-nav a:hover{
 color: white;
-stroke: white;
-background: red;
+background: rgba(255, 255, 255, 0.2);
+border-radius: 5px;
 }
+.dop-nav a:hover{
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  }
 
-.home a span{
-  padding: 3px;
-}
