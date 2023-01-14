@@ -4,17 +4,18 @@ function App() {
   return (
 
 
-    <div className="App">
-
-
-
-
-
+    <div className="wrapper">
+      <header className="header">header</header>
+      <nav className="nav">
+        <a href='#'></a>
+      </nav>
+      <main className="main">main</main>
+      <footer className="footer">footer</footer>
     </div>
-  
-  
-  
-  
+
+
+
+
   );
 }
 
