@@ -1,0 +1,11 @@
+.test{
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    font-family: 'icomoon';
+    color: blue;
+}
