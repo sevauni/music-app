@@ -1,0 +1,39 @@
+.player-bottom-test {
+    width: 100%;
+    height: 15vh;
+    background-color: #181818;
+    position: absolute;
+    bottom: 0px;
+}
+
+.audioplayer-container-test {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.buttons-spacing-test {
+    margin: 0 3px;
+}
+
+
+.time {
+    margin: 0 10px;
+    color: white;
+}
+
+.single-thumb {
+    width: 80%;
+}
+
+
+.single-thumb .range-slider__thumb[data-lower] {
+    display: none;
+}
+
+.track-slider {
+    width: 80%;
+}
