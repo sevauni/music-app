@@ -14,12 +14,19 @@ class AudioPlayer extends Component {
         playing: false,
         volume: 70,
         currentTrack: null,
-        currentTrackLength: 0,
+        currentTrackLength: 500,
         currentTrackPlayPosition: 0,
     };
 
 
+    testClick = (input) => {
+        console.log(input);
+    }
 
+    clickTest = (e) => {
+        console.log(e.target.value);
+        console.log("click");
+    }
 
 
     render() {
@@ -34,10 +41,20 @@ class AudioPlayer extends Component {
                     <Button onClick={this.clickTest} className="buttons-spacing-test" variant="secondary">Enable Repeat</Button>
                     <span id="duration" className='time'>0:00</span>
                     <RangeSlider
-                        className="slider"
+                        className="slider slider-track"
+                        defaultValue={[0, 0]}
+                        thumbsDisabled={[true, false]}
+                        rangeSlideDisabled={true}
+                        onInput={(value) => { this.testClick(value) }}
+                        max={this.state.currentTrackLength}
+                    />
+                    <Button onClick={this.clickTest} className="buttons-spacing-test" variant="secondary">Mute</Button>
+                    <RangeSlider
+                        className="slider slider-volume"
                         defaultValue={[0, 50]}
                         thumbsDisabled={[true, false]}
                         rangeSlideDisabled={true}
+                        onInput={(value) => { this.testClick(value) }}
                     />
                 </div>
             </div>

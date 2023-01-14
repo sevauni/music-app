@@ -23,9 +23,15 @@
     color: white;
 }
 
-.slider {
-    width: 80%;
+
+.slider-track {
+    width: 70%;
 }
+
+.slider-volume {
+    width: 10%;
+}
+
 
 
 .slider .range-slider__thumb[data-lower] {
@@ -43,9 +49,9 @@
 }
 
 .slider .range-slider__thumb[data-upper] {
-   width: 0.7em;
-   height: 0.7em;
-   border:1px solid;
-   border-color:black;
-   background-color: white;
+    width: 0.7em;
+    height: 0.7em;
+    border: 1px solid;
+    border-color: black;
+    background-color: white;
 }
