@@ -10,35 +10,104 @@
   display: grid;
   grid-template-columns: minmax(240px, 1fr) 5fr;
   grid-template-rows: 70px 1fr 100px;
-  grid-template-areas: "nav header"
+  grid-template-areas: "logo header"
                        "nav main"
                        "footer footer";
 }
 
-.header{
+header{
   background-color: red;
   grid-area: header;
 }
 
-.nav{
-  color: #b2b2b2;
+.logo{
+  padding-top: 2vh;
+  padding-left: 1.2vw;
+  grid-area: logo;
   background: #000000;
-  grid-area: nav;
   display: flex;
-  
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-end;
+  color: white;
+  font-size: 3vw;
+
 }
 
-.main{
+nav{
+  color: #b2b2b2;
+  background: #000000;
+  font-weight: bolder;
+  padding-left: 1.2vw;
+  grid-area: nav;
+  display: grid;
+  grid-template-rows: repeat(2, 15vh);
+  grid-row-gap: 10vh;
+  align-content: flex-start;
+  align-items:flex-start;
+  padding-top: 4vh;
+ 
+}
+
+main{
   background-color:#121212; 
   grid-area: main;
 }
 
-.footer{
+footer{
   background-color:#181818;   
   color: #b2b2b2;
   grid-area: footer;
 }
 
-.nav a{
+.logo a img{
+  width: 3.5vw;
+  padding-top: 1vh; 
+ 
+}
+.logo a{
+  text-decoration: none;
   color: white;
+}
+
+nav a img{
+  width: 2vw;
+  margin-right: 1vw;
+}
+nav a svg{
+  width: 2vw;
+  margin-right: 1vh;
+  stroke: #b2b2b2;
+}
+
+nav a{
+  text-decoration: none;
+  color: #b2b2b2;
+}
+
+
+.main-nav{
+  display: grid;
+  grid-template-rows: repeat(3, 7vh);
+  
+}
+.dop-nav{
+  display: grid;
+  grid-template-rows: repeat(2, 7vh);
+}
+
+.home a, .search a, .library a, .playlist a, .liked-songs a{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+.home a:hover{
+color: white;
+stroke: white;
+background: red;
+}
+
+.home a span{
+  padding: 3px;
 }
