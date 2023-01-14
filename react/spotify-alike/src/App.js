@@ -66,13 +66,24 @@ function App() {
           <div className='band-name'>Band Name</div>
           <span className="icon-like"></span>
         </div>
-        <div className='center-part'></div>
+        <div className='center-part'>
+        <span lassName="icon-shuffle-1-svgrepo-com"></span>
+        <span lassName="icon-play-and-pause"></span>
+        <span lassName="icon-play-circle"></span>
+        <span lassName="icon-play-and-pause2"></span>
+        <span lassName="icon-repeat-one"></span>
+        <div className='music-line'>
+          <div className='line'></div>
+        </div>
+        </div>
         <div className='right-part'>
-        <span className="icon-microphone"></span>
-        <span className="icon-queue"></span>
-        <span className="icon-laptop"></span>
-        <span className="icon-sound-min"></span>
-        <div className='sound-line'></div>
+          <span className="icon-microphone ir"></span>
+          <span className="icon-queue ir"></span>
+          <span className="icon-laptop ir"></span>
+          <div className='sound'>
+          <span id='sound-mute' className="icon-sound-min"></span>
+          <div className='sound-line'></div>
+          </div>
         </div>
       </footer>
     </div>

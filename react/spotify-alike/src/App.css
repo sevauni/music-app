@@ -173,6 +173,45 @@ footer{
     color: white;
 }
 
+
+.right-part{
+    width: 18vw;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.right-part span .ir{
+    color: #b2b2b2;
+    font-size: 1.5vw;
+}
+
+.right-part span:hover{
+    color: white;
+    font-size: 1.6vw;
+}
+
+.sound-line{
+    width: 7vw;
+    height: 4px;
+    background: white;
+    border-radius: 10px;
+}
+
+.sound{
+    width: 9vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#sound-mute{
+font-size: 2vw;
+}
+
+
 .logo a img{
   width: 3.5vw;
   padding-top: 1vh; 
@@ -224,4 +263,6 @@ transition: 0.2s;
   border-radius: 5px;
   transition: 0.2s;
   }
+
+  
 
