@@ -111,9 +111,66 @@ main{
 }
 
 footer{
+  padding: 1.5vw;
   background-color:#181818;   
   color: #b2b2b2;
   grid-area: footer;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.left-part{
+    width: 20vw;
+    display: grid;
+    grid-template-columns: 4.5vw 5.8vw 2vw;
+    grid-template-rows: 3.5vh 3.5vh;
+    grid-template-areas:"current-song song-title icon-like"
+                        "current-song band-name icon-like" ;
+    justify-content: flex-start;
+    grid-column-gap: 1.5vw;
+    align-content: center;
+    align-items: center;
+}
+
+.current-song{
+    width: 4.5vw;
+    height: 4.5vw;
+    background: white;
+    grid-area: current-song;
+}
+
+.song-title{
+    color: white;
+    font-weight: bold;
+    grid-area:song-title;
+}
+
+.song-title:hover{
+    text-decoration: underline;
+}
+
+.band-name{
+    color: #b2b2b2;
+    font-size: 14px;
+    grid-area:band-name;
+}
+
+.band-name:hover{
+    color: white;
+    text-decoration: underline; 
+}
+
+.icon-like{
+    color: #b2b2b2;
+    font-size: 1.5vw;
+    grid-area:icon-like;
+    font-weight: bolder;
+}
+
+.icon-like:hover{
+    color: white;
 }
 
 .logo a img{
