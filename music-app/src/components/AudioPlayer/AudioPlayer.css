@@ -24,34 +24,3 @@
 }
 
 
-.slider-track {
-    width: 70%;
-}
-
-.slider-volume {
-    width: 10%;
-}
-
-
-
-.slider .range-slider__thumb[data-lower] {
-    width: 0;
-    height: 0.5em;
-}
-
-.slider .range-slider__range {
-    border-radius: 6px;
-    background-color: #2ada88;
-}
-
-.slider:hover .range-slider__range {
-    background-color: #1db954;
-}
-
-.slider .range-slider__thumb[data-upper] {
-    width: 0.7em;
-    height: 0.7em;
-    border: 1px solid;
-    border-color: black;
-    background-color: white;
-}

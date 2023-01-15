@@ -1,5 +1,6 @@
 import './Footer.css';
 
+import SliderRange from '../SliderRange/SliderRange';
 import React, { Component } from 'react';
 
 class Footer extends Component {
@@ -20,7 +21,7 @@ class Footer extends Component {
                     <span className="icon-repeat-one"></span>
                     <div id="music-line">
                         0:18
-                        <div className="line"></div>
+                        <SliderRange startPosition='50'></SliderRange>
                         3:15
                     </div>
                 </div>
