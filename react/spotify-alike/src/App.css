@@ -240,7 +240,7 @@ justify-content: center;
     grid-area: icon-play-and-pause2;
     color: #b2b2b2;
     font-size: 2vw;
-}
+} 
 .icon-repeat-one{
     grid-area: icon-repeat-one;
     color: #b2b2b2;
