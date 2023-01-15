@@ -51,7 +51,11 @@ class AudioPlayer extends Component {
                     <Button onClick={this.clickTest} className="buttons-spacing-test" variant="secondary">Prev</Button>
                     <Button onClick={() => {}} className="buttons-spacing-test" variant="secondary">Play</Button>
                     <Button onClick={this.clickTest} className="buttons-spacing-test" variant="secondary">Next</Button>
-                    <Button onClick={this.clickTest} className="buttons-spacing-test" variant="secondary">Enable Repeat</Button>
+                    <Button 
+                    onClick={this.clickTest} 
+                    className="buttons-spacing-test" 
+                    variant="secondary"
+                    >Enable Repeat</Button>
                     <span id="duration" className='time'>0:00</span>
                     <RangeSlider
                         className="slider slider-track"
@@ -69,17 +73,7 @@ class AudioPlayer extends Component {
                         rangeSlideDisabled={true}
                         onInput={(value) => { this.testClick(value) }}
                     />
-                    <ReactAudioPlayer
-                        src={"music.mp3"}
-                        controls
-                        volume={this.state.volume}  
-                        ref={(element) => { this.rap = element; }}
-                        onLoadedMetadata={() => {
-                            console.log("Info loaded");
-                            this.onSongLoaded(this.rap.audioEl)
-                        }}
 
-                    />
                 </div>
             </div>
         );
