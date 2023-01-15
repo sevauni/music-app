@@ -16,62 +16,13 @@
                        "footer footer";
 }
 
-header{
-  background-color: #181818;
-  grid-area: header;
-  padding: 2vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: center;
-  align-items: center;
-}
-header img{
-    width: 1.3vw; 
-}
-
-.arrow-nav{
-    width: 80px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-.arrow{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
-.left{
-    margin-right: 2px;
-    cursor: not-allowed;
-}
-
-.right{
-    margin-left: 2px;
-    cursor: not-allowed;
-}
-.buttons button{
-    width: 120px;
-    height: 40px;
-    border-radius: 20px;
-    border: none;
-    letter-spacing: 1px;
-    cursor: pointer;
-    background: white;
-}
 
 
 
-.buttons button:hover{
-    width: 125px;
-    height: 43px;
-}
+
+
+
+
 
 
 .logo{
@@ -88,117 +39,27 @@ header img{
 
 }
 
-nav{
-  color: #b2b2b2;
-  background: #000000;
-  font-weight: bolder;
-  padding-left: 1.2vw;
-  grid-area: nav;
-  display: grid;
-  grid-template-rows: repeat(2, 15vh);
-  grid-row-gap: 10vh;
-  align-content: flex-start;
-  align-items:flex-start;
-  padding-top: 4vh;
- 
-}
-
-main{
-  background-color:#121212; 
-  grid-area: main;
-  color: white;
-  padding: 2vw;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 200px 1fr;
-  grid-template-areas: "main-header"
-                       "main-body";
-}
 
 
 
-.main-body{
-  background: rgb(30, 1, 56);
-  grid-area: main-body;
-}
-.main-header{
-  grid-area: main-header;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 35px 1fr;
-  grid-template-areas: "header-queue"
-                        "."
-                       "now-playng";
-}
 
-.header-queue{
-  font-size: 25px;
-  font-weight: bolder;
-  grid-area: header-queue;
-}
 
-.now-playng{
-  grid-area: now-playng;
-  color: #b2b2b2;
-  font-weight: bolder;
-  display: grid;
-  grid-template-rows: auto 1fr 45px;
-  grid-template-columns: 1fr ;
-  grid-template-areas: "np-title"
-                       "song-items"
-                       ".";
-}
 
-.np-title{
-  grid-area: np-title;
-}
 
-.song-items{
-  grid-area:song-items;
-  display: grid;
-  background-color: rgba(255, 255, 255, 0.2);
-  margin-top: 4px;
-  border-radius: 5px;
-  grid-template-columns: 1.2fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "song-left song-right";
-  padding: 0.5vw 1vw;
-}
 
-.song-left{
-  background-color:rgb(87, 49, 2);
-  grid-area: song-left; 
-  display: grid;
-  grid-template-columns: 20px 5vw max-content 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "icon-play current-song-player np-song-title ."
-                        "icon-play current-song-player np-band-name .";
-}
 
-.icon-play{
-  color: white;
-  font-size: 14px;
-  grid-area: icon-play;
-}
 
-.current-song-player{
-  width:3vw;
-  height: 3vw;
-  background: white;
-  grid-area: current-song-player;
-  margin: 0 10px;
-}
-.np-song-title{
-  grid-area:np-song-title;
-}
-.np-band-name{
-  grid-area: np-band-name;
-}
 
-.song-right{
-  background-color:rgb(50, 4, 124);
-  grid-area: song-right;
-}
+
+
+
+
+
+
+
+
+
+
 
 /*//////footer//////*/
 footer{
@@ -393,47 +254,16 @@ font-size: 2vw;
   color: white;
 }
 
-nav a .ic{
-  font-size: 1.8vw;
-  margin-right: 1vw;
-}
-
-nav a{
-  text-decoration: none;
-  color: #b2b2b2;
-  padding: 0.7vh 1vh;
-  margin-right: 1.5vh;
-}
 
 
-.main-nav{
-  display: grid;
-  grid-template-rows: repeat(3, 7vh);
-  
-}
-.dop-nav{
-  display: grid;
-  grid-template-rows: repeat(2, 7vh);
-}
 
-.home a, .search a, .library a, .playlist a, .liked-songs a{
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-}
 
-.main-nav a:hover{
-color: white;
-background: rgba(255, 255, 255, 0.2);
-border-radius: 5px;
-transition: 0.2s;
-}
-.dop-nav a:hover{
-  color: white;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
-  transition: 0.2s;
-  }
+
+
+
+
+
+
 
 /*//////footer//////*/
   .overlay-like p{
