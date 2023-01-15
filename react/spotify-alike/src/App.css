@@ -169,21 +169,18 @@ footer{
     font-weight: bolder;
 }
 
-.icon-like:hover{
-    color: white;
-}
-
 
 .right-part{
-    width: 18vw;
-    display: flex;
-    flex-direction: row;
+    width: 17.5vw;
+    display: grid;
+    grid-template-columns: 1.7vw 1.7vw 1.7vw 7vw;
     align-content: center;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    grid-column-gap: 1vw;
 }
 
-.right-part span .ir{
+.right-part .ir{
     color: #b2b2b2;
     font-size: 1.5vw;
 }
@@ -192,6 +189,8 @@ footer{
     color: white;
     font-size: 1.6vw;
 }
+
+
 
 .sound-line{
     width: 7vw;
@@ -211,12 +210,14 @@ footer{
 width: 37vw;
 display: grid;
 grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 2fr;
-grid-template-rows: 1fr 1fr;
+grid-template-rows: 3.8vw 1fr;
 grid-template-areas: ". icon-shuffle-1-svgrepo-com icon-play-and-pause icon-play-circle icon-play-and-pause2 icon-repeat-one ."
                       "music-line music-line music-line music-line music-line music-line music-line";
 align-items: center;
 align-content: center;
 justify-content: center;
+justify-items: center;
+
 }
 
 
@@ -224,44 +225,58 @@ justify-content: center;
 .icon-shuffle-1-svgrepo-com{
     grid-area: icon-shuffle-1-svgrepo-com;
     color: #b2b2b2;
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 .icon-play-and-pause{
     grid-area: icon-play-and-pause;
     color: #b2b2b2;
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 .icon-play-circle{
     grid-area: icon-play-circle;
     color: #b2b2b2;
-    font-size: 2vw;
+    font-size: 3.3vw;
 }
 .icon-play-and-pause2{
     grid-area: icon-play-and-pause2;
     color: #b2b2b2;
-    font-size: 2vw;
+    font-size: 1.5vw;
 } 
 .icon-repeat-one{
     grid-area: icon-repeat-one;
     color: #b2b2b2;
     font-size: 2vw;
 }
+
+.center-part .ic:hover{
+color: white;
+}
+
+.icon-play-circle:hover{
+  font-size: 3.4vw;
+}
+
+
 #music-line{
     grid-area: music-line;
     font-size: 13px;
     color: #b2b2b2;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 2.5vw 1fr 2.5vw;
     align-items: center;
-    align-content: center;
-    justify-content: space-between;
 }
 
 .line{
     width: 32vw;
     height: 4px;
     background: white;
-    border-radius: 10px;
+    border-radius: 10px;  
+    margin-top: 2px 
+}
+
+.time{
+  display: flex;
+  justify-content: flex-end;
 }
 
 
@@ -320,6 +335,92 @@ transition: 0.2s;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
   transition: 0.2s;
+  }
+
+  /*/////////////////overlay//////////////////////*/
+  .overlay-like p{
+    margin-top: 4px;
+  }
+  .overlay-like{
+    display:none;
+    position: absolute;
+    bottom: 85px;
+    left: 140px;
+    color:white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.4) 0px 15px 12px;
+    background: #292929;
+    font-size: 14px;
+    font-weight: lighter;
+    width: 150px;
+    height: 25px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .icon-like:hover .overlay-like{
+    display: block;
+  } 
+  .icon-like:hover{
+    color: white;
+  }
+
+  .rs{
+    display:none;
+    position: absolute;
+    bottom: 85px;
+    color:white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.4) 0px 15px 12px;
+    background: #292929;
+    font-size: 14px;
+    font-weight: lighter;
+    height: 25px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 4px 10px;
+  }
+
+  .icon-microphone:hover .overlay-microphone{
+    display: block;
+    right: 216px;
+  }
+
+  .icon-queue:hover .overlay-queue{
+    display: block;
+    right: 180px;
+  }
+
+  .icon-laptop:hover .overlay-laptop{
+    display: block;
+    right: 90px;
+  }
+
+  .icon-sound-min:hover .overlay-sound-min{
+    display: block;
+    right: 110px;
+  }
+
+  .icon-shuffle-1-svgrepo-com:hover .overlay-shuffle{
+    display: block;
+    left: 535px;
+  }
+
+  .icon-play-and-pause:hover .overlay-play-and-pause{
+    display: block;
+    left: 610px;
+  }
+
+  .icon-play-and-pause2:hover .overlay-play-and-pause2{
+    display: block;
+    left: 730px;
+  }
+
+  .icon-play-circle:hover .overlay-play{
+    display: block;
+    left: 680px;
+  }
+
+  .icon-repeat-one:hover .overlay-repeat{
+    display: block;
+    left: 765px;
   }
 
   
