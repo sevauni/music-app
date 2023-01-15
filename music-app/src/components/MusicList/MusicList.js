@@ -17,7 +17,12 @@ class MusicList extends Component {
                 <div className='np-song-title'>Song Title</div>
                 <div className='np-band-name'>Band Name</div>
               </div>
-              <div className="song-right"></div>
+              <div className="song-right">
+                <div className="album-title">Album Title</div>
+                <span class="icon-like"></span>
+                <div className="time">3:08</div>
+                <span class="icon-dots"></span>
+              </div>
             </div>
           </div>
         </div>
