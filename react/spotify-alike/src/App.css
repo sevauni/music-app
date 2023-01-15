@@ -107,8 +107,88 @@ main{
   background-color:#121212; 
   grid-area: main;
   color: white;
-  font-size: 20px;
+  padding: 2vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 200px 1fr;
+  grid-template-areas: "main-header"
+                       "main-body";
 }
+
+
+
+.main-body{
+  background: rgb(30, 1, 56);
+  grid-area: main-body;
+}
+.main-header{
+  grid-area: main-header;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 35px 1fr;
+  grid-template-areas: "header-queue"
+                        "."
+                       "now-playng";
+}
+
+.header-queue{
+  font-size: 25px;
+  font-weight: bolder;
+  grid-area: header-queue;
+}
+
+.now-playng{
+  grid-area: now-playng;
+  color: #b2b2b2;
+  font-weight: bolder;
+  display: grid;
+  grid-template-rows: auto 1fr 45px;
+  grid-template-columns: 1fr ;
+  grid-template-areas: "np-title"
+                       "song-items"
+                       ".";
+}
+
+.np-title{
+  grid-area: np-title;
+}
+
+.song-items{
+  grid-area:song-items;
+  display: grid;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-top: 4px;
+  border-radius: 5px;
+  grid-template-columns: 1.2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "song-left song-right";
+  padding: 0.5vw 1vw;
+}
+
+.song-left{
+  background-color:rgb(87, 49, 2);
+  grid-area: song-left; 
+  display: grid;
+  grid-template-columns: 20px 3vw min-content;
+  grid-template-rows: 1fr;
+}
+
+.icon-play{
+  color: white;
+  font-size: 14px;
+}
+
+.current-song-player{
+  width:3vw;
+  height: 3vw;
+  background: white;
+}
+
+.song-right{
+  background-color:rgb(50, 4, 124);
+  grid-area: song-right;
+}
+
 
 footer{
   padding: 1.5vw;

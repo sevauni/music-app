@@ -54,10 +54,23 @@ function App() {
           </div>
         </div>
       </nav>
-      <main className="main">main
-        <span className="icon-heart"></span>
-        <span className="icon-like">sdsd</span>
-        <span className="icon-shuffle-1-svgrepo-com"></span>
+      <main className="main">
+        <div className='main-header'>
+          <div className='header-queue'>Queue</div>
+          <div className='now-playng'>
+            <div className='np-title'>Now playng</div>
+            <div className="song-items">
+              <div className="song-left">
+                <span class="icon-play"></span>
+                <div className='current-song-player'></div>
+                <div className='np-song-title'>Song Title</div>
+                <div className='np-band-name'>Band Name</div>
+              </div>
+              <div className="song-right"></div>
+            </div>
+          </div>
+        </div>
+        <div className='main-body'></div>
       </main>
       <footer className="footer">
         <div className='left-part'>
@@ -73,7 +86,7 @@ function App() {
           <span className="icon-play-and-pause2 ic"><div className='overlay-play-and-pause2 rs'><p>Next</p></div></span>
           <span className="icon-repeat-one ic"><div className='overlay-repeat rs'><p>Enable repeat</p></div></span>
           <div id="music-line">
-           <div>0:18</div>
+            <div>0:18</div>
             <div className="line"></div>
             <div className='time'>3:15</div>
           </div>
