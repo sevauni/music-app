@@ -1,3 +1,4 @@
+
 *{
   margin: 0;
   padding: 0;
@@ -16,9 +17,62 @@
 }
 
 header{
-  background-color: red;
+  background-color: #181818;
   grid-area: header;
+  padding: 2vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
 }
+header img{
+    width: 1.3vw; 
+}
+
+.arrow-nav{
+    width: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.arrow{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.left{
+    margin-right: 2px;
+    cursor: not-allowed;
+}
+
+.right{
+    margin-left: 2px;
+    cursor: not-allowed;
+}
+.buttons button{
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background: white;
+}
+
+
+
+.buttons button:hover{
+    width: 125px;
+    height: 43px;
+}
+
 
 .logo{
   padding-top: 2vh;
@@ -52,13 +106,169 @@ nav{
 main{
   background-color:#121212; 
   grid-area: main;
+  color: white;
+  font-size: 20px;
 }
 
 footer{
+  padding: 1.5vw;
   background-color:#181818;   
   color: #b2b2b2;
   grid-area: footer;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
 }
+
+.left-part{
+    width: 20vw;
+    display: grid;
+    grid-template-columns: 4.5vw 5.8vw 2vw;
+    grid-template-rows: 3.5vh 3.5vh;
+    grid-template-areas:"current-song song-title icon-like"
+                        "current-song band-name icon-like" ;
+    justify-content: flex-start;
+    grid-column-gap: 1.5vw;
+    align-content: center;
+    align-items: center;
+}
+
+.current-song{
+    width: 4.5vw;
+    height: 4.5vw;
+    background: white;
+    grid-area: current-song;
+}
+
+.song-title{
+    color: white;
+    font-weight: bold;
+    grid-area:song-title;
+}
+
+.song-title:hover{
+    text-decoration: underline;
+}
+
+.band-name{
+    color: #b2b2b2;
+    font-size: 14px;
+    grid-area:band-name;
+}
+
+.band-name:hover{
+    color: white;
+    text-decoration: underline; 
+}
+
+.icon-like{
+    color: #b2b2b2;
+    font-size: 1.5vw;
+    grid-area:icon-like;
+    font-weight: bolder;
+}
+
+.icon-like:hover{
+    color: white;
+}
+
+
+.right-part{
+    width: 18vw;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.right-part span .ir{
+    color: #b2b2b2;
+    font-size: 1.5vw;
+}
+
+.right-part span:hover{
+    color: white;
+    font-size: 1.6vw;
+}
+
+.sound-line{
+    width: 7vw;
+    height: 4px;
+    background: white;
+    border-radius: 10px;
+}
+
+.sound{
+    width: 9vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.center-part{
+width: 37vw;
+display: grid;
+grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 2fr;
+grid-template-rows: 1fr 1fr;
+grid-template-areas: ". icon-shuffle-1-svgrepo-com icon-play-and-pause icon-play-circle icon-play-and-pause2 icon-repeat-one ."
+                      "music-line music-line music-line music-line music-line music-line music-line";
+align-items: center;
+align-content: center;
+justify-content: center;
+}
+
+
+
+.icon-shuffle-1-svgrepo-com{
+    grid-area: icon-shuffle-1-svgrepo-com;
+    color: #b2b2b2;
+    font-size: 2vw;
+}
+.icon-play-and-pause{
+    grid-area: icon-play-and-pause;
+    color: #b2b2b2;
+    font-size: 2vw;
+}
+.icon-play-circle{
+    grid-area: icon-play-circle;
+    color: #b2b2b2;
+    font-size: 2vw;
+}
+.icon-play-and-pause2{
+    grid-area: icon-play-and-pause2;
+    color: #b2b2b2;
+    font-size: 2vw;
+} 
+.icon-repeat-one{
+    grid-area: icon-repeat-one;
+    color: #b2b2b2;
+    font-size: 2vw;
+}
+#music-line{
+    grid-area: music-line;
+    font-size: 13px;
+    color: #b2b2b2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.line{
+    width: 32vw;
+    height: 4px;
+    background: white;
+    border-radius: 10px;
+}
+
+
+#sound-mute{
+font-size: 2vw;
+}
+
 
 .logo a img{
   width: 3.5vw;
@@ -70,19 +280,16 @@ footer{
   color: white;
 }
 
-nav a img{
-  width: 2vw;
+nav a .ic{
+  font-size: 1.8vw;
   margin-right: 1vw;
-}
-nav a svg{
-  width: 2vw;
-  margin-right: 1vh;
-  stroke: #b2b2b2;
 }
 
 nav a{
   text-decoration: none;
   color: #b2b2b2;
+  padding: 0.7vh 1vh;
+  margin-right: 1.5vh;
 }
 
 
@@ -102,12 +309,18 @@ nav a{
   align-content: center;
 }
 
-.home a:hover{
+.main-nav a:hover{
 color: white;
-stroke: white;
-background: red;
+background: rgba(255, 255, 255, 0.2);
+border-radius: 5px;
+transition: 0.2s;
 }
+.dop-nav a:hover{
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  transition: 0.2s;
+  }
 
-.home a span{
-  padding: 3px;
-}
+  
+

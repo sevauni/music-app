@@ -5,7 +5,15 @@ function App() {
 
 
     <div className="wrapper">
-      <header className="header">header</header>
+      <header className="header">
+        <div className="arrow-nav">
+          <div className='arrow'><img className='left' src="./left.svg" alt="" /></div>
+          <div className='arrow'><img className='right' src="./right.svg" alt="" /></div>
+        </div>
+        <div className="buttons">
+          <button>LOG IN</button>
+        </div>
+      </header>
       <div className='logo'>
         <a href="#"><img src="./music-bars-svgrepo-com-white.svg" alt="logo"></img></a>
         <a href="#"><div>Music</div></a>
@@ -14,22 +22,19 @@ function App() {
         <div className="main-nav">
           <div className='home'>
             <a href="#">
-              {/* <img src="./home-svgrepo-com.svg" alt="home" /> */}
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-              </svg>
+              <span className="icon-home ic"></span>
               <span>Home</span>
             </a>
           </div>
           <div className='search'>
             <a href="#">
-              <img src="./search-svgrepo-com.svg" alt="search" />
+              <span className="icon-search ic"></span>
               <span>Search</span>
             </a>
           </div>
           <div className='library'>
             <a href="#">
-              <img src="./library-svgrepo-com.svg" alt="library" />
+              <span className="icon-library ic"></span>
               <span>Your library</span>
             </a>
           </div>
@@ -37,20 +42,52 @@ function App() {
         <div className='dop-nav'>
           <div className='playlist'>
             <a href="#">
-              <img src="./add-svgrepo-com.svg" alt="add playlist" />
+              <span className="icon-playlist ic"></span>
               <span>Create Playlist</span>
             </a>
           </div>
           <div className='liked-songs'>
             <a href="#">
-              <img src="./heart-like-svgrepo-com.svg" alt="liked songs" />
+              <span className="icon-heart ic"></span>
               <span>Liked Songs</span>
             </a>
           </div>
         </div>
       </nav>
-      <main className="main">main</main>
-      <footer className="footer">footer</footer>
+      <main className="main">main
+        <span className="icon-heart"></span>
+        <span className="icon-like">sdsd</span>
+        <span className="icon-shuffle-1-svgrepo-com"></span>
+      </main>
+      <footer className="footer">
+        <div className='left-part'>
+          <div className='current-song'></div>
+          <div className='song-title'>Song Title</div>
+          <div className='band-name'>Band Name</div>
+          <span className="icon-like"></span>
+        </div>
+        <div className='center-part'>
+          <span className="icon-shuffle-1-svgrepo-com"></span>
+          <span className="icon-play-and-pause"></span>
+          <span className="icon-play-circle"></span>
+          <span className="icon-play-and-pause2"></span>
+          <span className="icon-repeat-one"></span>
+          <div id="music-line">
+            0:18
+            <div className="line"></div>
+            3:15
+          </div>
+        </div>
+        <div className='right-part'>
+          <span className="icon-microphone ir"></span>
+          <span className="icon-queue ir"></span>
+          <span className="icon-laptop ir"></span>
+          <div className='sound'>
+            <span id='sound-mute' className="icon-sound-min"></span>
+            <div className='sound-line'></div>
+          </div>
+        </div>
+      </footer>
     </div>
 
 
