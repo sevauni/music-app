@@ -1,11 +1,18 @@
 {
-    "hide-files.files": [],
+    "hide-files.files": [
+        "music-app/node_modules",
+        "music-app/package-lock.json",
+        "music-app/.gitignore"
+    ],
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
-        "**/Thumbs.db": true
+        "**/Thumbs.db": true,
+        "music-app/node_modules": true,
+        "music-app/package-lock.json": true,
+        "music-app/.gitignore": true
     }
 }
