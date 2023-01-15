@@ -169,19 +169,30 @@ main{
   background-color:rgb(87, 49, 2);
   grid-area: song-left; 
   display: grid;
-  grid-template-columns: 20px 3vw min-content;
-  grid-template-rows: 1fr;
+  grid-template-columns: 20px 5vw max-content 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "icon-play current-song-player np-song-title ."
+                        "icon-play current-song-player np-band-name .";
 }
 
 .icon-play{
   color: white;
   font-size: 14px;
+  grid-area: icon-play;
 }
 
 .current-song-player{
   width:3vw;
   height: 3vw;
   background: white;
+  grid-area: current-song-player;
+  margin: 0 10px;
+}
+.np-song-title{
+  grid-area:np-song-title;
+}
+.np-band-name{
+  grid-area: np-band-name;
 }
 
 .song-right{
@@ -189,7 +200,7 @@ main{
   grid-area: song-right;
 }
 
-
+/*//////footer//////*/
 footer{
   padding: 1.5vw;
   background-color:#181818;   
@@ -200,7 +211,7 @@ footer{
   justify-content: space-between;
   align-content: center;
 }
-
+/*//////footer//////*/
 .left-part{
     width: 20vw;
     display: grid;
@@ -213,35 +224,35 @@ footer{
     align-content: center;
     align-items: center;
 }
-
+/*//////footer//////*/
 .current-song{
     width: 4.5vw;
     height: 4.5vw;
     background: white;
     grid-area: current-song;
 }
-
+/*//////footer//////*/
 .song-title{
     color: white;
     font-weight: bold;
     grid-area:song-title;
 }
-
+/*//////footer//////*/
 .song-title:hover{
     text-decoration: underline;
 }
-
+/*//////footer//////*/
 .band-name{
     color: #b2b2b2;
     font-size: 14px;
     grid-area:band-name;
 }
-
+/*//////footer//////*/
 .band-name:hover{
     color: white;
     text-decoration: underline; 
 }
-
+/*//////footer//////*/
 .icon-like{
     color: #b2b2b2;
     font-size: 1.5vw;
@@ -249,7 +260,7 @@ footer{
     font-weight: bolder;
 }
 
-
+/*//////footer//////*/
 .right-part{
     width: 17.5vw;
     display: grid;
@@ -259,18 +270,18 @@ footer{
     justify-content: flex-start;
     grid-column-gap: 1vw;
 }
-
+/*//////footer//////*/
 .right-part .ir{
     color: #b2b2b2;
     font-size: 1.5vw;
 }
-
+/*//////footer//////*/
 .right-part span:hover{
     color: white;
     font-size: 1.6vw;
 }
 
-
+/*//////footer//////*/
 
 .sound-line{
     width: 7vw;
@@ -278,14 +289,14 @@ footer{
     background: white;
     border-radius: 10px;
 }
-
+/*//////footer//////*/
 .sound{
     width: 9vw;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
-
+/*//////footer//////*/
 .center-part{
 width: 37vw;
 display: grid;
@@ -301,42 +312,49 @@ justify-items: center;
 }
 
 
-
+/*//////footer//////*/
 .icon-shuffle-1-svgrepo-com{
     grid-area: icon-shuffle-1-svgrepo-com;
     color: #b2b2b2;
     font-size: 1.5vw;
 }
+/*//////footer//////*/
 .icon-play-and-pause{
     grid-area: icon-play-and-pause;
     color: #b2b2b2;
     font-size: 1.5vw;
 }
+/*//////footer//////*/
 .icon-play-circle{
     grid-area: icon-play-circle;
     color: #b2b2b2;
     font-size: 3.3vw;
 }
+
+/*//////footer//////*/
 .icon-play-and-pause2{
     grid-area: icon-play-and-pause2;
     color: #b2b2b2;
     font-size: 1.5vw;
 } 
+/*//////footer//////*/
 .icon-repeat-one{
     grid-area: icon-repeat-one;
     color: #b2b2b2;
     font-size: 2vw;
 }
 
+/*//////footer//////*/
 .center-part .ic:hover{
 color: white;
 }
 
+/*//////footer//////*/
 .icon-play-circle:hover{
   font-size: 3.4vw;
 }
 
-
+/*//////footer//////*/
 #music-line{
     grid-area: music-line;
     font-size: 13px;
@@ -345,7 +363,7 @@ color: white;
     grid-template-columns: 2.5vw 1fr 2.5vw;
     align-items: center;
 }
-
+/*//////footer//////*/
 .line{
     width: 32vw;
     height: 4px;
@@ -353,13 +371,13 @@ color: white;
     border-radius: 10px;  
     margin-top: 2px 
 }
-
+/*//////footer//////*/
 .time{
   display: flex;
   justify-content: flex-end;
 }
 
-
+/*//////footer//////*/
 #sound-mute{
 font-size: 2vw;
 }
@@ -417,10 +435,11 @@ transition: 0.2s;
   transition: 0.2s;
   }
 
-  /*/////////////////overlay//////////////////////*/
+/*//////footer//////*/
   .overlay-like p{
     margin-top: 4px;
   }
+  /*//////footer//////*/
   .overlay-like{
     display:none;
     position: absolute;
@@ -436,13 +455,17 @@ transition: 0.2s;
     border-radius: 5px;
     text-align: center;
   }
+  /*//////footer//////*/
   .icon-like:hover .overlay-like{
     display: block;
   } 
+  /*//////footer//////*/
   .icon-like:hover{
     color: white;
   }
 
+
+/*//////footer//////*/
   .rs{
     display:none;
     position: absolute;
@@ -457,47 +480,49 @@ transition: 0.2s;
     text-align: center;
     padding: 4px 10px;
   }
-
+/*//////footer//////*/
   .icon-microphone:hover .overlay-microphone{
     display: block;
     right: 216px;
   }
-
+/*//////footer//////*/
   .icon-queue:hover .overlay-queue{
     display: block;
     right: 180px;
   }
-
   .icon-laptop:hover .overlay-laptop{
     display: block;
     right: 90px;
   }
-
+/*//////footer//////*/
   .icon-sound-min:hover .overlay-sound-min{
     display: block;
     right: 110px;
   }
-
+/*//////footer//////*/
   .icon-shuffle-1-svgrepo-com:hover .overlay-shuffle{
     display: block;
     left: 535px;
   }
 
+  /*//////footer//////*/
   .icon-play-and-pause:hover .overlay-play-and-pause{
     display: block;
     left: 610px;
   }
 
+  /*//////footer//////*/
   .icon-play-and-pause2:hover .overlay-play-and-pause2{
     display: block;
     left: 730px;
   }
 
+  /*//////footer//////*/
   .icon-play-circle:hover .overlay-play{
     display: block;
     left: 680px;
   }
-
+/*//////footer//////*/
   .icon-repeat-one:hover .overlay-repeat{
     display: block;
     left: 765px;
