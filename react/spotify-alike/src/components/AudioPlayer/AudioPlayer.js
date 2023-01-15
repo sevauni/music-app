@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
 
-//import RangeSlider from 'react-range-slider-input';
+import RangeSlider from 'react-range-slider-input';
 //import 'react-range-slider-input/dist/style.css';
 
 
