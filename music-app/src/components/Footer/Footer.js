@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import RightPart from '../RightPart/RightPart';
 import AudioPlayer from '../AudioPlayer/AudioPlayer';
-
+import MediaSession from '@mebtte/react-media-session';
 import './Footer.css';
 
 class Footer extends Component {
@@ -34,21 +34,6 @@ class Footer extends Component {
 
 
 
-    onVolumeChange = (input) => {
-
-        const volume = input[1];
-
-        const mute = input[1] < 4 ? true : false;
-
-        if (input[1] !== this.state.volume) {
-            this.setState(
-                {
-                    volume: volume,
-                    mute: mute
-                }
-            );
-        }
-    }
 
 
 
@@ -60,10 +45,6 @@ class Footer extends Component {
         );
     }
 
-
-
-
-
     render() {
 
         const { volume, mute } = this.state;
@@ -71,6 +52,7 @@ class Footer extends Component {
 
         return (
             <footer className="footer">
+                
                 <div className='left-part'>
                     <div className='current-song'></div>
                     <div className='song-title'>Song Title</div>

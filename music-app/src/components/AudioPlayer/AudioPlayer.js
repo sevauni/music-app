@@ -24,7 +24,9 @@ class AudioPlayer extends Component {
     };
 
 
-
+    millisToTimeString = (inputMillis) => {
+        return new Date(inputMillis).toISOString().slice(14, 19);
+    }
 
     onClickPlayButton = () => {
         if (this.state.playing) {
@@ -52,12 +54,6 @@ class AudioPlayer extends Component {
         );
 
     }
-
-
-    millisToTimeString = (inputMillis) => {
-        return new Date(inputMillis).toISOString().slice(14, 19);
-    }
-
 
     onTrackLoading = (input) => {
         const currentTrackLengthMillis = input.duration;
@@ -109,28 +105,8 @@ class AudioPlayer extends Component {
 
     }
 
-    _onVolumeUpdate = (input) => {
 
 
-        let newVolume = this._scale(input, 0, 100, 0, 1).toFixed(2);
-
-
-        if (this.state.volume !== newVolume) {
-            this.setState({
-                volume: newVolume
-            });
-        }
-        return newVolume;
-    }
-
-    testClick = (input) => {
-        console.log(input);
-    }
-
-    clickTest = (e) => {
-        console.log(e.target.value);
-        console.log("click");
-    }
 
     componentDidMount() {
 
@@ -142,20 +118,16 @@ class AudioPlayer extends Component {
             playStatus,
             loop,
             currentTrackPath,
-            currentTrackLengthSec,
             currentTrackLengthMillis,
-            currentTrackPlayPositionSec,
             currentTrackPlayPositionMillis,
         } = this.state;
 
         let volume = this.props.mute ? 0 : this.props.volume;
 
-
-        this.millisToTimeString(54000000);
-
-
         return (
             <>
+
+
                 <Sound
                     autoLoad
                     url={currentTrackPath}
@@ -187,7 +159,7 @@ class AudioPlayer extends Component {
                 <div id="music-line">
 
                     {this.millisToTimeString(currentTrackPlayPositionMillis)}
-                    
+
                     <SliderRange max={currentTrackLengthMillis} value={currentTrackPlayPositionMillis} onInput={this.onTrackSearch} />
                     {this.millisToTimeString(currentTrackLengthMillis)}
                 </div>
