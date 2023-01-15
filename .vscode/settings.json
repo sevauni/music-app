@@ -1,18 +1,11 @@
 {
-    "hide-files.files": [
-        "react/spotify-alike/package.json",
-        "react/spotify-alike/package-lock.json",
-        "react/spotify-alike/.gitignore"
-    ],
+    "hide-files.files": [],
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
-        "**/Thumbs.db": true,
-        "react/spotify-alike/package.json": true,
-        "react/spotify-alike/package-lock.json": true,
-        "react/spotify-alike/.gitignore": true
+        "**/Thumbs.db": true
     }
 }
