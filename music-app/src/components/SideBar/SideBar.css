@@ -1,0 +1,64 @@
+nav {
+    color: #b2b2b2;
+    background: #000000;
+    font-weight: bolder;
+    padding-left: 1.2vw;
+    grid-area: nav;
+    display: grid;
+    grid-template-rows: repeat(2, 15vh);
+    grid-row-gap: 10vh;
+    align-content: flex-start;
+    align-items: flex-start;
+    padding-top: 4vh;
+
+}
+
+nav a .ic {
+    font-size: 1.8vw;
+    margin-right: 1vw;
+}
+
+nav a {
+    text-decoration: none;
+    color: #b2b2b2;
+    padding: 0.7vh 1vh;
+    margin-right: 1.5vh;
+}
+
+
+
+.main-nav {
+    display: grid;
+    grid-template-rows: repeat(3, 7vh);
+}
+
+.main-nav a:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.home a,
+.search a,
+.library a,
+.playlist a,
+.liked-songs a {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+
+
+.dop-nav {
+    display: grid;
+    grid-template-rows: repeat(2, 7vh);
+}
+
+.dop-nav a:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    transition: 0.2s;
+}

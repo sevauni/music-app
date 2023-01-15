@@ -1,0 +1,57 @@
+header{
+    background-color: #181818;
+    grid-area: header;
+    padding: 2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+  }
+  header img{
+      width: 1.3vw; 
+  }
+
+
+  .arrow-nav{
+    width: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.arrow{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.left{
+    margin-right: 2px;
+    cursor: not-allowed;
+}
+.right{
+    margin-left: 2px;
+    cursor: not-allowed;
+}
+
+
+.buttons button{
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background: white;
+}
+.buttons button:hover{
+    width: 125px;
+    height: 43px;
+}
+
