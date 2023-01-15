@@ -1,10 +1,74 @@
-import './Footer.css';
-
-import SliderRange from '../SliderRange/SliderRange';
 import React, { Component } from 'react';
 
+import RightPart from '../RightPart/RightPart';
+import AudioPlayer from '../AudioPlayer/AudioPlayer';
+
+import './Footer.css';
+
 class Footer extends Component {
+
+    state = {
+        volume: 50,
+        mute: false
+    };
+
+    onChange = (input) => {
+        console.log(input);
+    }
+
+    onVolumeChange = (input) => {
+
+        const volume = input[1];
+        const mute = input[1] < 4 ? true : false;
+
+        if (input[1] !== this.state.volume) {
+            this.setState(
+                {
+                    volume: volume,
+                    mute: mute
+                }
+            );
+        }
+    }
+
+
+
+
+    onVolumeChange = (input) => {
+
+        const volume = input[1];
+
+        const mute = input[1] < 4 ? true : false;
+
+        if (input[1] !== this.state.volume) {
+            this.setState(
+                {
+                    volume: volume,
+                    mute: mute
+                }
+            );
+        }
+    }
+
+
+
+    onMute = () => {
+        this.setState(
+            {
+                mute: !this.state.mute
+            }
+        );
+    }
+
+
+
+
+
     render() {
+
+        const { volume, mute } = this.state;
+        const showVolume = !mute ? volume : 0;
+
         return (
             <footer className="footer">
                 <div className='left-part'>
@@ -14,26 +78,13 @@ class Footer extends Component {
                     <span className="icon-like"></span>
                 </div>
                 <div className='center-part'>
-                    <span className="icon-shuffle-1-svgrepo-com"></span>
-                    <span className="icon-play-and-pause"></span>
-                    <span className="icon-play-circle"></span>
-                    <span className="icon-play-and-pause2"></span>
-                    <span className="icon-repeat-one"></span>
-                    <div id="music-line">
-                        0:18
-                        <SliderRange startPosition='50'></SliderRange>
-                        3:15
-                    </div>
+                    <AudioPlayer volume={volume} mute={mute} />
                 </div>
-                <div className='right-part'>
-                    <span className="icon-microphone ir"></span>
-                    <span className="icon-queue ir"></span>
-                    <span className="icon-laptop ir"></span>
-                    <div className='sound'>
-                        <span id='sound-mute' className="icon-sound-min"></span>
-                        <div className='sound-line'></div>
-                    </div>
-                </div>
+                <RightPart
+                    onVolumeChange={this.onVolumeChange}
+                    volumeValue={showVolume}
+                    onVolumeMute={this.onMute}
+                    volumeMuteValue={false} />
             </footer>
         );
     }

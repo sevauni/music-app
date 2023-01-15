@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Button from 'react-bootstrap/Button';
 
-import RangeSlider from 'react-range-slider-input';
-//import 'react-range-slider-input/dist/style.css';
+
+import Sound from 'react-sound-2';
+import SliderRange from '../SliderRange/SliderRange';
 
 
 import "./AudioPlayer.css";
@@ -12,19 +12,102 @@ import "./AudioPlayer.css";
 class AudioPlayer extends Component {
     state = {
         playing: false,
-        volume: 0.5,
+        playStatus: 'STOPPED',
+        loop: false,
         volumeMute: false,
         currentTrack: null,
-        currentTrackLength: 500,
-        currentTrackPlayPosition: 0,
+        currentTrackLengthSec: 500,
+        currentTrackLengthMillis: 500,
+        currentTrackPlayPositionSec: 0,
+        currentTrackPlayPositionMillis: 0,
         currentTrackPath: './music.mp3',
     };
 
-    _scale = (number, inMin, inMax, outMin, outMax) => {
-        return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
+
+
+
+    onClickPlayButton = () => {
+        if (this.state.playing) {
+            this.setState(
+                {
+                    playing: false,
+                    playStatus: 'STOPPED',
+                }
+            );
+        } else {
+            this.setState(
+                {
+                    playing: true,
+                    playStatus: 'PLAYING',
+                }
+            );
+        }
+    }
+
+    onClickLoopButton = () => {
+        this.setState(
+            {
+                loop: !this.state.loop
+            }
+        );
+
     }
 
 
+    millisToTimeString = (inputMillis) => {
+        return new Date(inputMillis).toISOString().slice(14, 19);
+    }
+
+
+    onTrackLoading = (input) => {
+        const currentTrackLengthMillis = input.duration;
+
+        if (currentTrackLengthMillis !== this.state.currentTrackLengthMillis) {
+            this.setState(
+                {
+                    currentTrackLengthMillis: currentTrackLengthMillis
+                }
+            );
+        }
+    }
+
+    onTrackPlaying = (input) => {
+        const currentTrackPlayPositionMillis = input.position;
+
+        if (currentTrackPlayPositionMillis !== this.state.currentTrackPlayPositionMillis) {
+            this.setState(
+                {
+                    currentTrackPlayPositionMillis: currentTrackPlayPositionMillis
+                }
+            );
+        }
+    }
+
+    onTrackSearch = (input) => {
+        // input[1]
+        const currentTrackPlayPositionMillis = input[1];
+
+        this.setState(
+            {
+                currentTrackPlayPositionMillis: currentTrackPlayPositionMillis
+            }
+        );
+
+
+
+        // const currentTrackPlayPositionMillis = input.position;
+
+        // if (currentTrackPlayPositionMillis !== this.state.currentTrackPlayPositionMillis) {
+        //     this.setState(
+        //         {
+        //             currentTrackPlayPositionMillis: currentTrackPlayPositionMillis
+        //         }
+        //     );
+        // }
+
+
+
+    }
 
     _onVolumeUpdate = (input) => {
 
@@ -49,66 +132,67 @@ class AudioPlayer extends Component {
         console.log("click");
     }
 
-
     componentDidMount() {
 
 
     }
 
     render() {
-        return
-        // return (
-        //     <div className='player-bottom-test'>
-        //         <div className='audioplayer-container-test'>
-        //             <span id="current-time" className='time'>0:00</span>
+        const {
+            playStatus,
+            loop,
+            currentTrackPath,
+            currentTrackLengthSec,
+            currentTrackLengthMillis,
+            currentTrackPlayPositionSec,
+            currentTrackPlayPositionMillis,
+        } = this.state;
 
-        //             <Button onClick={this.clickTest} className="buttons-spacing-test" variant="secondary">Shuffle</Button>
-
-        //             <Button onClick={() => { }}
-        //                 className="buttons-spacing-test" variant="secondary">Prev</Button>
-
-        //             <Button onClick={() => { }}
-        //                 className="buttons-spacing-test" variant="secondary">Play</Button>
-        //             <Button onClick={this.clickTest} className="buttons-spacing-test" variant="secondary">Next</Button>
+        let volume = this.props.mute ? 0 : this.props.volume;
 
 
-        //             <Button
-        //                 onClick={this.clickTest}
-        //                 className="buttons-spacing-test"
-        //                 variant="secondary"
-        //             >Enable Repeat</Button>
+        this.millisToTimeString(54000000);
 
-        //             <span id="duration" className='time'>0:00</span>
 
-        //             <RangeSlider
-        //                 className="slider slider-track"
-        //                 defaultValue={[0, 0]}
-        //                 thumbsDisabled={[true, false]}
-        //                 rangeSlideDisabled={true}
-        //                 onInput={(value) => { this.testClick(value) }}
-        //                 max={this.state.currentTrackLength}
-        //             />
+        return (
+            <>
+                <Sound
+                    autoLoad
+                    url={currentTrackPath}
+                    playStatus={playStatus}
+                    onLoading={this.onTrackLoading}
+                    position={currentTrackPlayPositionMillis}
+                    onPlaying={this.onTrackPlaying}
+                    volume={volume}
+                    loop={loop}
+                />
 
-        //             <Button
-        //                 onClick={() => { this.player.volume = 0 }}
-        //                 className="buttons-spacing-test"
-        //                 variant="secondary"
-        //             >Mute
-        //             </Button>
+                <span className="icon-shuffle-1-svgrepo-com"></span>
+                <span className="icon-play-and-pause"></span>
 
-        //             <RangeSlider
-        //                 className="slider slider-volume"
-        //                 defaultValue={[0, this.state.volume * 100]}
-        //                 thumbsDisabled={[true, false]}
-        //                 rangeSlideDisabled={true}
-        //                 onInput={(value) => {
-        //                     console.log(this.player.volume);
-        //                 }}
-        //             />
+                <span
+                    className="icon-play-circle"
+                    onClick={this.onClickPlayButton}
+                />
 
-        //         </div>
-        //     </div>
-        // );
+                <span className="icon-play-and-pause2"></span>
+
+                <span
+                    className="icon-repeat-one"
+                    onClick={this.onClickLoopButton}
+                />
+
+
+
+                <div id="music-line">
+
+                    {this.millisToTimeString(currentTrackPlayPositionMillis)}
+                    
+                    <SliderRange max={currentTrackLengthMillis} value={currentTrackPlayPositionMillis} onInput={this.onTrackSearch} />
+                    {this.millisToTimeString(currentTrackLengthMillis)}
+                </div>
+            </>
+        )
     }
 
 

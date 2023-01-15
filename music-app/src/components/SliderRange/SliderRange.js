@@ -12,12 +12,11 @@ class SliderRange extends Component {
         return (
             <RangeSlider
                 className="slider slider-volume"
-                defaultValue={[0, this.props.startPosition]}
                 thumbsDisabled={[true, false]}
                 rangeSlideDisabled={true}
-                onInput={(value) => {
-                    console.log(value);
-                }}
+                max = {this.props.max}
+                value = {[0,this.props.value]}
+                onInput={this.props.onInput}
             />
         );
     }
