@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import RightPart from '../RightPart/RightPart';
 import AudioPlayer from '../AudioPlayer/AudioPlayer';
-import MediaSession from '@mebtte/react-media-session';
 import './Footer.css';
 
 class Footer extends Component {
