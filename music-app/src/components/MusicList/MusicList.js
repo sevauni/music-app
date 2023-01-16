@@ -18,7 +18,7 @@ class MusicList extends Component {
         </div>
         <div className='main-body'>
           <div className='next'>
-            Next from:
+            Next from:&nbsp;
             <span className='current-song-title'>Current Song</span>
           </div>
           <div className='list-of-songs'>
