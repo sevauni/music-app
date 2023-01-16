@@ -6,68 +6,31 @@
             "trackName": "First Track",
             "author": "First Author",
             "albumName": "First Album",
-            "path" : "./music/albums/music.mp3",
-			"duration" : "3:34",
+            "path" : "./tracks/music(1).mp3",
+			"duration" : "3:24",
             "icon" : "./trackIcon.png"
         },
 		        {
             "id": 1,
             "trackNumber": 1,
-            "trackName": "Sample Track",
+            "trackName": "Sample Track 2",
             "author": "Sample Author",
             "albumName": "Sample Album",
-            "path" : "./music/albums/music.mp3",
-			"duration" : "3:34",
+            "path" : "./tracks/music(2).mp3",
+			"duration" : "3:24",
             "icon" : "./trackIcon.png"
         },
 		        {
             "id": 1,
             "trackNumber": 1,
-            "trackName": "Sample Track",
+            "trackName": "Sample Track 3",
             "author": "Sample Author",
             "albumName": "Sample Album",
-            "path" : "./music/albums/music.mp3",
+            "path" : "./tracks/music(3).mp3",
 			"duration" : "3:34",
             "icon" : "./trackIcon.png"
-        },
-		        {
-            "id": 1,
-            "trackNumber": 1,
-            "trackName": "Sample Track",
-            "author": "Sample Author",
-            "albumName": "Sample Album",
-            "path" : "./music/albums/music.mp3",
-			"duration" : "3:34",
-            "icon" : "./trackIcon.png"
-        },
-		        {
-            "id": 1,
-            "trackNumber": 1,
-            "trackName": "Sample Track",
-            "author": "Sample Author",
-            "albumName": "Sample Album",
-            "path" : "./music/albums/music.mp3",
-			"duration" : "3:34",
-            "icon" : "./trackIcon.png"
-        },
-				        {
-            "id": 1,
-            "trackNumber": 1,
-            "trackName": "Sample Track",
-            "author": "Sample Author",
-            "albumName": "Sample Album",
-			"duration" : "3:34",
-            "icon" : "./trackIcon.png"
-        },
-				        {
-            "id": 1,
-            "trackNumber": 1,
-            "trackName": "Sample Track",
-            "author": "Sample Author",
-            "albumName": "Sample Album",
-			"duration" : "3:34",
-            "icon" : "./trackIcon.png"
-        } 
+        }
+
     ],
     "profile": {
         "name": "Bruce Wayne"

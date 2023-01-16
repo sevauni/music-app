@@ -19,12 +19,8 @@ class AudioPlayer extends Component {
         loop: false,
         volumeMute: false,
         currentTrack: 0,
-        trackAmount: 1,
-        currentTrackLengthSec: 500,
         currentTrackLengthMillis: 500,
-        currentTrackPlayPositionSec: 0,
         currentTrackPlayPositionMillis: 0,
-        currentTrackPath: './music.mp3',
     };
 
 
@@ -32,21 +28,11 @@ class AudioPlayer extends Component {
         return new Date(inputMillis).toISOString().slice(14, 19);
     }
 
-    onClickPlayButton = () => {
-        if (this.state.playing) {
-            this.setState(
-                {
-                    playing: false,
-                    playStatus: 'STOPPED',
-                }
-            );
+    boolToStatus = (playingBool) => {
+        if (playingBool) {
+            return 'PLAYING'
         } else {
-            this.setState(
-                {
-                    playing: true,
-                    playStatus: 'PLAYING',
-                }
-            );
+            return 'PAUSED'
         }
     }
 
@@ -94,40 +80,50 @@ class AudioPlayer extends Component {
         );
 
 
-
-        // const currentTrackPlayPositionMillis = input.position;
-
-        // if (currentTrackPlayPositionMillis !== this.state.currentTrackPlayPositionMillis) {
-        //     this.setState(
-        //         {
-        //             currentTrackPlayPositionMillis: currentTrackPlayPositionMillis
-        //         }
-        //     );
-        // }
+    }
 
 
 
+
+
+
+    getAudioPath() {
+        if (this.props.info.tracksInfo !== null) {
+            const { path } = this.props.info.tracksInfo[this.props.info.currentTrackId];
+            return path;
+        }
+        return null;
+    }
+
+
+    componentDidUpdate() {
+        if (this.props.info.currentTrackId !== this.state.currentTrack) {
+            this.setState(
+                {   currentTrack: this.props.info.currentTrackId,
+                    currentTrackPlayPositionMillis: 0
+                }
+            );
+        }
     }
 
 
     render() {
+
         const {
-            playStatus,
             loop,
-            currentTrackPath,
             currentTrackLengthMillis,
             currentTrackPlayPositionMillis,
         } = this.state;
 
         let volume = this.props.mute ? 0 : this.props.volume;
+        const playStatus = this.boolToStatus(this.props.info.currentStatus);
+        const path = this.getAudioPath();
 
         return (
             <>
-
-
                 <Sound
                     autoLoad
-                    url={currentTrackPath}
+                    url={path}
                     playStatus={playStatus}
                     onLoading={this.onTrackLoading}
                     position={currentTrackPlayPositionMillis}
@@ -135,30 +131,30 @@ class AudioPlayer extends Component {
                     volume={volume}
                     loop={loop}
                 />
-                
+
                 <div className="icons-player-align">
-                <span className="icon-shuffle-1-svgrepo-com ic"><div className='overlay-shuffle rs'><p>Enable shuffle</p></div></span>
-                <span className="icon-play-and-pause ic"><div className='overlay-play-and-pause rs'><p>Previous</p></div></span>
+                    <span className="icon-shuffle-1-svgrepo-com ic"><div className='overlay-shuffle rs'><p>Enable shuffle</p></div></span>
+                    <span className="icon-play-and-pause ic"><div className='overlay-play-and-pause rs'><p>Previous</p></div></span>
 
-                <span className="icon-play-circle ic" onClick={this.onClickPlayButton}>
+                    <span className="icon-play-circle ic" onClick={this.props.onPlayChange}>
                         <div className='overlay-play rs'><p>Play</p></div>
-                </span>
+                    </span>
 
-                <span className="icon-play-and-pause2 ic"><div className='overlay-play-and-pause2 rs'><p>Next</p></div></span>
+                    <span className="icon-play-and-pause2 ic"><div className='overlay-play-and-pause2 rs'><p>Next</p></div></span>
 
-                <span className="icon-repeat-one ic" onClick={this.onClickLoopButton}>
-                <div className='overlay-repeat rs'><p>Enable repeat</p></div>
-                </span>
+                    <span className="icon-repeat-one ic" onClick={this.onClickLoopButton}>
+                        <div className='overlay-repeat rs'><p>Enable repeat</p></div>
+                    </span>
                 </div>
 
 
 
                 <div id="music-line">
 
-                   <div className="time-left"> {this.millisToTimeString(currentTrackPlayPositionMillis)} </div>
+                    <div className="time-left"> {this.millisToTimeString(currentTrackPlayPositionMillis)} </div>
 
                     <SliderRange className="slider-center" max={currentTrackLengthMillis} value={currentTrackPlayPositionMillis} onInput={this.onTrackSearch} />
-                   <div className="time-right"> {this.millisToTimeString(currentTrackLengthMillis)} </div>
+                    <div className="time-right"> {this.millisToTimeString(currentTrackLengthMillis)} </div>
                 </div>
             </>
         )

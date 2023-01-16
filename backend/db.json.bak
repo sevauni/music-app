@@ -3,11 +3,12 @@
         {
             "id": 1,
             "trackNumber": 1,
-            "trackName": "Sample Track",
-            "author": "Sample Author",
-            "albumName": "Sample Album",
+            "trackName": "First Track",
+            "author": "First Author",
+            "albumName": "First Album",
             "path" : "./music/albums/music.mp3",
-            "duration" : "3:34"
+			"duration" : "3:34",
+            "icon" : "./trackIcon.png"
         },
 		        {
             "id": 1,
@@ -16,7 +17,8 @@
             "author": "Sample Author",
             "albumName": "Sample Album",
             "path" : "./music/albums/music.mp3",
-            "duration" : "3:34"
+			"duration" : "3:34",
+            "icon" : "./trackIcon.png"
         },
 		        {
             "id": 1,
@@ -25,7 +27,8 @@
             "author": "Sample Author",
             "albumName": "Sample Album",
             "path" : "./music/albums/music.mp3",
-            "duration" : "3:34"
+			"duration" : "3:34",
+            "icon" : "./trackIcon.png"
         },
 		        {
             "id": 1,
@@ -34,7 +37,8 @@
             "author": "Sample Author",
             "albumName": "Sample Album",
             "path" : "./music/albums/music.mp3",
-            "duration" : "3:34"
+			"duration" : "3:34",
+            "icon" : "./trackIcon.png"
         },
 		        {
             "id": 1,
@@ -43,8 +47,27 @@
             "author": "Sample Author",
             "albumName": "Sample Album",
             "path" : "./music/albums/music.mp3",
-            "duration" : "3:34"
-        }
+			"duration" : "3:34",
+            "icon" : "./trackIcon.png"
+        },
+				        {
+            "id": 1,
+            "trackNumber": 1,
+            "trackName": "Sample Track",
+            "author": "Sample Author",
+            "albumName": "Sample Album",
+			"duration" : "3:34",
+            "icon" : "./trackIcon.png"
+        },
+				        {
+            "id": 1,
+            "trackNumber": 1,
+            "trackName": "Sample Track",
+            "author": "Sample Author",
+            "albumName": "Sample Album",
+			"duration" : "3:34",
+            "icon" : "./trackIcon.png"
+        } 
     ],
     "profile": {
         "name": "Bruce Wayne"

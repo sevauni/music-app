@@ -13,10 +13,8 @@ class App extends Component {
 
   state = {
     tracksInfo: null,
-    status: {
-      currentTrackId: 0,
-      currentStatus: false
-    }
+    currentTrackId: 0,
+    currentStatus: false
   }
 
   loaderService = new LoaderService('http://localhost:3004/');
@@ -31,46 +29,46 @@ class App extends Component {
             tracksInfo: result
           }
         );
-        //console.log(this.state);
       })
       .catch(console.log("Fetch Catch"));
   }
-  onTrackChange(nextTrack) {
+
+
+  onTrackChange = (nextTrack) => {
 
     this.setState(
       {
-        status: {
-          currentTrackId: nextTrack,
-          currentStatus: false
-        }
+        currentTrackId: nextTrack,
       }
     );
-  }
-  onPlayChange(nextStatus) {
 
+  }
+
+
+  onPlayChange = () => {
     this.setState(
       {
-        status: {
-          currentStatus: nextStatus
-        }
+
+
+        currentStatus: !this.state.currentStatus
+
       }
     );
+
   }
-
-
-
 
   render() {
     return (
+
       <div className="wrapper">
         <Navigation />
         <div className='logo'>
           <a href="/#"><img src="./music-bars-svgrepo-com-white.svg" alt="logo"></img></a>
           <a href="/#"><div>Music</div></a>
         </div>
-        <MusicList info={this.state} />
+        <MusicList info={this.state} onTrackChange={this.onTrackChange} onPlayChange={this.onPlayChange} />
         <SideBar />
-        <Footer info={this.state} />
+        <Footer info={this.state} onTrackChange={this.onTrackChange} onPlayChange={this.onPlayChange}/>
       </div>
 
     );

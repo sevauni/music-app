@@ -9,17 +9,30 @@ class TrackLine extends Component {
 
 
     render() {
-
-
         const { albumName, author, duration, trackName, icon } = this.props.info;
         return (
-            <div className="song-line">
+            <div className="song-line" onClick={() => {
+                if (this.props.first) {
+                    this.props.onPlayChange(this.props.trackId);
+                } else {
+                    this.props.onTrackChange(this.props.trackId);
+                }
+
+            }}>
                 <div className="song-left">
-                    <span className="icon-play"></span>
+                    <span onClick={() => {
+                        if (this.props.first) {
+                            this.props.onPlayChange(this.props.trackId);
+                        } else {
+                            this.props.onTrackChange(this.props.trackId);
+                            this.props.onPlayChange(this.props.trackId);
+                        }
+                    }
+                    }
+                        className="icon-play"></span>
                     <div className='current-song-player'>
                         <img src={icon} width="100%" alt={trackName} />
                     </div>
-
                     <div className='np-song-title'>{trackName}</div>
                     <div className='np-band-name'>{author}</div>
                 </div>
