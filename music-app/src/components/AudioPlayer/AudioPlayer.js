@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
 
-
 import Sound from 'react-sound-2';
 import SliderRange from '../SliderRange/SliderRange';
+
+
 
 
 import "./AudioPlayer.css";
 
 
-
 class AudioPlayer extends Component {
+
+
+
     state = {
         playing: false,
         playStatus: 'STOPPED',
         loop: false,
         volumeMute: false,
-        currentTrack: null,
+        currentTrack: 0,
+        trackAmount: 1,
         currentTrackLengthSec: 500,
         currentTrackLengthMillis: 500,
         currentTrackPlayPositionSec: 0,
@@ -105,13 +109,6 @@ class AudioPlayer extends Component {
 
     }
 
-
-
-
-    componentDidMount() {
-
-
-    }
 
     render() {
         const {

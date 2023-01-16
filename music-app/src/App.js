@@ -4,6 +4,15 @@ import MusicList from './components/MusicList/MusicList';
 import SideBar from './components/SideBar/SideBar';
 import Footer from './components/Footer/Footer';
 
+window.soundManager.setup({debugMode: false}); //disable soundmanager logs
+
+
+
+
+
+
+
+
 function App() {
   return (
     <div className="wrapper">
