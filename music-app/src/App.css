@@ -39,7 +39,7 @@ main {
   font-size: 20px;
 }
 
-.logo a img {
+.logo a .img-logo {
   width: 3.5vw;
   padding-top: 1vh;
 

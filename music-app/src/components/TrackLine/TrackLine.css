@@ -25,6 +25,7 @@
     color: white;
     font-size: 14px;
     grid-area: icon-play;
+    cursor: pointer;
 }
 
 .current-song-player {
@@ -46,6 +47,13 @@
     grid-area: np-band-name;
     font-weight: normal;
     font-size: 16px;
+    color: #b2b2b2;
+    cursor: pointer;
+}
+
+.np-band-name:hover{
+color: white;
+text-decoration: underline;
 }
 
 .song-right {
@@ -62,6 +70,7 @@
 .song-right .icon-like {
     font-size: 1.5vw;
     grid-area: icon-like;
+    cursor: pointer;
 }
 
 .album-title {
@@ -69,6 +78,7 @@
     font-size: 16px;
     font-weight: normal;
     cursor: pointer;
+    color: #b2b2b2;
 }
 
 .album-title:hover{
@@ -76,17 +86,18 @@
     text-decoration: underline;
 }
 
-.time{
+.song-right .time {
     font-size: 16px;
     font-weight: normal;
     grid-area: time;
+    color: #b2b2b2;
 }
 
 .icon-dots{
     grid-area: icon-dots;
+    cursor: pointer;
 }
 
 .icon-dots:hover{
     color: white;
-    text-decoration: underline;
 }

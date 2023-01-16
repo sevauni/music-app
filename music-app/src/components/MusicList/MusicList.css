@@ -2,7 +2,7 @@ main {
     background-color: #121212;
     grid-area: main;
     color: white;
-    padding: 2vw;
+    padding: 1.5vw 2vw;
     display: grid;
     height: 100%;
     overflow: auto;
@@ -34,7 +34,7 @@ main {
 
 
 .header-queue {
-    font-size: 25px;
+    font-size: 1.5rem;
     font-weight: bolder;
     grid-area: header-queue;
 }
@@ -54,8 +54,9 @@ main {
 
 
 .np-title {
+    margin-bottom: 0.8rem;
     grid-area: np-title;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 
@@ -77,10 +78,20 @@ main {
 
 .next{
     grid-area: next;
+    margin-bottom: 0.7rem;
+    font-size: 16px;
+    font-weight: bolder;
+    color: #b2b2b2;
 }
 
 .current-song-title{
     grid-area: current-song-title;
+    cursor: pointer;
+}
+
+.current-song-title:hover{
+    color: white;
+    text-decoration: underline;
 }
 
 .list-of-songs{

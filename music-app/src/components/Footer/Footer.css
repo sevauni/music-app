@@ -85,6 +85,15 @@
   display: block;
   left: 670px;
 }
+.icon-pause-circle{
+  grid-area: icon-play-circle;
+  color: #b2b2b2;
+  font-size: 3.3vw;
+}
+
+.icon-pause-circle:hover{
+font-size: 3.4vw;
+}
 
   
 .icon-repeat-one:hover .overlay-repeat{
@@ -96,10 +105,10 @@
 
   
 footer{
-  width: 100vw;
-  min-height: max-content; 
+  min-width: 100%;
+  min-height: 20%; 
   position: fixed;
-  bottom: -1vh;
+  bottom: 0;
   padding: 1.5vw;
   background-color:#181818;   
   color: #b2b2b2;
@@ -111,10 +120,10 @@ footer{
 }
   
 .left-part{
-    width: 20vw;
+    width: 17rem;
     display: grid;
-    grid-template-columns: 4.5vw 5.8vw 2vw;
-    grid-template-rows: 3.5vh 3.5vh;
+    grid-template-columns: minmax(3rem, 3.8rem) max-content minmax(1rem, 1.3rem);
+    grid-template-rows: minmax(1.1rem,3.5vh) minmax(1.1rem,3.5vh);
     grid-template-areas:"current-song song-title icon-like"
                         "current-song band-name icon-like" ;
     justify-content: flex-start;
@@ -124,8 +133,8 @@ footer{
 }
   
 .current-song{
-    width: 4.5vw;
-    height: 4.5vw;
+    width: 3.8rem;
+    height: 3.8rem;
     background: white;
     grid-area: current-song;
 }
@@ -134,6 +143,9 @@ footer{
     color: white;
     font-weight: bold;
     grid-area:song-title;
+    font-size: 1rem;
+    min-width: 4.5rem;
+   
 }
   
 .song-title:hover{
@@ -142,8 +154,9 @@ footer{
   
 .band-name{
     color: #b2b2b2;
-    font-size: 14px;
+    font-size: 0.9rem;
     grid-area:band-name;
+    min-width: 4.5rem;
 }
   
 .band-name:hover{
@@ -153,16 +166,16 @@ footer{
   
 .icon-like{
     color: #b2b2b2;
-    font-size: 1.5vw;
+    font-size: 1.3rem;
     grid-area:icon-like;
     font-weight: bolder;
 }
 
   
 .right-part{
-    width: 17.5vw;
+    width: 15.5rem;
     display: grid;
-    grid-template-columns: 1.7vw 1.7vw 1.7vw 7vw;
+    grid-template-columns: minmax(1.2rem, 1.5rem) minmax(1.2rem, 1.5rem) minmax(1.2rem, 1.5rem) minmax(8rem,8.5rem);
     align-content: center;
     align-items: center;
     justify-content: flex-start;
@@ -171,7 +184,7 @@ footer{
   
 .right-part .ir{
     color: #b2b2b2;
-    font-size: 1.5vw;
+    font-size: 1.3rem;
 }
   
 .right-part span:hover{
@@ -183,31 +196,18 @@ footer{
 
 .sound-line{
     width: 7vw;
+    min-width: 6rem;
     height: 4px;
     background: white;
     border-radius: 10px;
 }
 
 .sound{
-    width: 9vw;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
-/* .center-part{
-width: 37vw;
-display: grid;
-grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 2fr;
-grid-template-rows: 3.8vw 1fr;
-grid-template-areas: ". icon-shuffle-1-svgrepo-com icon-play-and-pause icon-play-circle icon-play-and-pause2 icon-repeat-one ."
-                      "music-line music-line music-line music-line music-line music-line music-line";
-align-items: center;
-align-content: center;
-justify-content: center;
-justify-items: center;
-
-} */
 
 .center-part {
   width: 37vw;
@@ -235,8 +235,6 @@ justify-items: center;
   justify-content: center;
   justify-items: center;
 }
-
-
 
 
   
@@ -318,5 +316,5 @@ color: white;
 
   
 #sound-mute{
-font-size: 2vw;
+font-size: 1.7rem;
 }
