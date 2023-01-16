@@ -9,7 +9,7 @@ function App() {
     <div className="wrapper">
       <Navigation />
       <div className='logo'>
-        <a href="/#"><img src="./music-bars-svgrepo-com-white.svg" alt="logo"></img></a>
+        <a href="/#"><img  className='img-logo' src="./music-bars-svgrepo-com-white.svg" alt="logo"></img></a>
         <a href="/#"><div>Music</div></a>
       </div>
       <MusicList />
