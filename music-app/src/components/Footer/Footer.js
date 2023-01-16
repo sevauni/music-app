@@ -56,7 +56,7 @@ class Footer extends Component {
                     <div className='current-song'></div>
                     <div className='song-title'>Song Title</div>
                     <div className='band-name'>Band Name</div>
-                    <span className="icon-like"></span>
+                    <span className="icon-like"><div className='overlay-like'><p>Save to Your Library</p></div></span>
                 </div>
                 <div className='center-part'>
                     <AudioPlayer volume={volume} mute={mute} />

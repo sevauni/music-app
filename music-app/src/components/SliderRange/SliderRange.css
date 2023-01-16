@@ -1,4 +1,9 @@
 
+.slider{
+height: 4px;
+
+}
+
 .slider .range-slider__thumb[data-lower] {
     width: 0;
     height: 0.5em;

@@ -11,7 +11,7 @@ class SliderRange extends Component {
     render() {
         return (
             <RangeSlider
-                className="slider slider-volume"
+                className={`slider slider-volume ${this.props.className}`}
                 thumbsDisabled={[true, false]}
                 rangeSlideDisabled={true}
                 max = {this.props.max}

@@ -1,31 +1,22 @@
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.wrapper{
-  
+.wrapper {
+
   height: 100vh;
   display: grid;
   grid-template-columns: minmax(240px, 1fr) 5fr;
   grid-template-rows: 70px 1fr 100px;
   grid-template-areas: "logo header"
-                       "nav main"
-                       "footer footer";
+    "nav main"
+    "footer footer";
 }
 
 
-
-
-
-
-
-
-
-
-.logo{
+.logo {
   padding-top: 2vh;
   padding-left: 1.2vw;
   grid-area: logo;
@@ -39,324 +30,13 @@
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*//////footer//////*/
-footer{
-  padding: 1.5vw;
-  background-color:#181818;   
-  color: #b2b2b2;
-  grid-area: footer;
-  display:flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: center;
-}
-/*//////footer//////*/
-.left-part{
-    width: 20vw;
-    display: grid;
-    grid-template-columns: 4.5vw 5.8vw 2vw;
-    grid-template-rows: 3.5vh 3.5vh;
-    grid-template-areas:"current-song song-title icon-like"
-                        "current-song band-name icon-like" ;
-    justify-content: flex-start;
-    grid-column-gap: 1.5vw;
-    align-content: center;
-    align-items: center;
-}
-/*//////footer//////*/
-.current-song{
-    width: 4.5vw;
-    height: 4.5vw;
-    background: white;
-    grid-area: current-song;
-}
-/*//////footer//////*/
-.song-title{
-    color: white;
-    font-weight: bold;
-    grid-area:song-title;
-}
-/*//////footer//////*/
-.song-title:hover{
-    text-decoration: underline;
-}
-/*//////footer//////*/
-.band-name{
-    color: #b2b2b2;
-    font-size: 14px;
-    grid-area:band-name;
-}
-/*//////footer//////*/
-.band-name:hover{
-    color: white;
-    text-decoration: underline; 
-}
-/*//////footer//////*/
-.icon-like{
-    color: #b2b2b2;
-    font-size: 1.5vw;
-    grid-area:icon-like;
-    font-weight: bolder;
-}
-
-/*//////footer//////*/
-.right-part{
-    width: 17.5vw;
-    display: grid;
-    grid-template-columns: 1.7vw 1.7vw 1.7vw 7vw;
-    align-content: center;
-    align-items: center;
-    justify-content: flex-start;
-    grid-column-gap: 1vw;
-}
-/*//////footer//////*/
-.right-part .ir{
-    color: #b2b2b2;
-    font-size: 1.5vw;
-}
-/*//////footer//////*/
-.right-part span:hover{
-    color: white;
-    font-size: 1.6vw;
-}
-
-/*//////footer//////*/
-
-.sound-line{
-    width: 7vw;
-    height: 4px;
-    background: white;
-    border-radius: 10px;
-}
-/*//////footer//////*/
-.sound{
-    width: 9vw;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-/*//////footer//////*/
-.center-part{
-width: 37vw;
-display: grid;
-grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 2fr;
-grid-template-rows: 3.8vw 1fr;
-grid-template-areas: ". icon-shuffle-1-svgrepo-com icon-play-and-pause icon-play-circle icon-play-and-pause2 icon-repeat-one ."
-                      "music-line music-line music-line music-line music-line music-line music-line";
-align-items: center;
-align-content: center;
-justify-content: center;
-justify-items: center;
-
-}
-
-
-/*//////footer//////*/
-.icon-shuffle-1-svgrepo-com{
-    grid-area: icon-shuffle-1-svgrepo-com;
-    color: #b2b2b2;
-    font-size: 1.5vw;
-}
-/*//////footer//////*/
-.icon-play-and-pause{
-    grid-area: icon-play-and-pause;
-    color: #b2b2b2;
-    font-size: 1.5vw;
-}
-/*//////footer//////*/
-.icon-play-circle{
-    grid-area: icon-play-circle;
-    color: #b2b2b2;
-    font-size: 3.3vw;
-}
-
-/*//////footer//////*/
-.icon-play-and-pause2{
-    grid-area: icon-play-and-pause2;
-    color: #b2b2b2;
-    font-size: 1.5vw;
-} 
-/*//////footer//////*/
-.icon-repeat-one{
-    grid-area: icon-repeat-one;
-    color: #b2b2b2;
-    font-size: 2vw;
-}
-
-/*//////footer//////*/
-.center-part .ic:hover{
-color: white;
-}
-
-/*//////footer//////*/
-.icon-play-circle:hover{
-  font-size: 3.4vw;
-}
-
-/*//////footer//////*/
-#music-line{
-    grid-area: music-line;
-    font-size: 13px;
-    color: #b2b2b2;
-    display: grid;
-    grid-template-columns: 2.5vw 1fr 2.5vw;
-    align-items: center;
-}
-/*//////footer//////*/
-.line{
-    width: 32vw;
-    height: 4px;
-    background: white;
-    border-radius: 10px;  
-    margin-top: 2px 
-}
-/*//////footer//////*/
-.time{
-  display: flex;
-  justify-content: flex-end;
-}
-
-/*//////footer//////*/
-#sound-mute{
-font-size: 2vw;
-}
-
-
-.logo a img{
+.logo a img {
   width: 3.5vw;
-  padding-top: 1vh; 
- 
+  padding-top: 1vh;
+
 }
-.logo a{
+
+.logo a {
   text-decoration: none;
   color: white;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-/*//////footer//////*/
-  .overlay-like p{
-    margin-top: 4px;
-  }
-  /*//////footer//////*/
-  .overlay-like{
-    display:none;
-    position: absolute;
-    bottom: 85px;
-    left: 140px;
-    color:white;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.4) 0px 15px 12px;
-    background: #292929;
-    font-size: 14px;
-    font-weight: lighter;
-    width: 150px;
-    height: 25px;
-    border-radius: 5px;
-    text-align: center;
-  }
-  /*//////footer//////*/
-  .icon-like:hover .overlay-like{
-    display: block;
-  } 
-  /*//////footer//////*/
-  .icon-like:hover{
-    color: white;
-  }
-
-
-/*//////footer//////*/
-  .rs{
-    display:none;
-    position: absolute;
-    bottom: 85px;
-    color:white;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.4) 0px 15px 12px;
-    background: #292929;
-    font-size: 14px;
-    font-weight: lighter;
-    height: 25px;
-    border-radius: 5px;
-    text-align: center;
-    padding: 4px 10px;
-  }
-/*//////footer//////*/
-  .icon-microphone:hover .overlay-microphone{
-    display: block;
-    right: 216px;
-  }
-/*//////footer//////*/
-  .icon-queue:hover .overlay-queue{
-    display: block;
-    right: 180px;
-  }
-  .icon-laptop:hover .overlay-laptop{
-    display: block;
-    right: 90px;
-  }
-/*//////footer//////*/
-  .icon-sound-min:hover .overlay-sound-min{
-    display: block;
-    right: 110px;
-  }
-/*//////footer//////*/
-  .icon-shuffle-1-svgrepo-com:hover .overlay-shuffle{
-    display: block;
-    left: 535px;
-  }
-
-  /*//////footer//////*/
-  .icon-play-and-pause:hover .overlay-play-and-pause{
-    display: block;
-    left: 610px;
-  }
-
-  /*//////footer//////*/
-  .icon-play-and-pause2:hover .overlay-play-and-pause2{
-    display: block;
-    left: 730px;
-  }
-
-  /*//////footer//////*/
-  .icon-play-circle:hover .overlay-play{
-    display: block;
-    left: 680px;
-  }
-/*//////footer//////*/
-  .icon-repeat-one:hover .overlay-repeat{
-    display: block;
-    left: 765px;
-  }
-
-  
-

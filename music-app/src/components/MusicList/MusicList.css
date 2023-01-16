@@ -4,6 +4,8 @@ main {
     color: white;
     padding: 2vw;
     display: grid;
+    height: 100%;
+    overflow: auto;
     grid-template-columns: 1fr;
     grid-template-rows: 200px 1fr;
     grid-template-areas: "main-header"
@@ -113,16 +115,23 @@ main {
 .song-right {
     grid-area: song-right;
     display: grid;
-    grid-template-columns: max-content 1fr 3vw 3vw 3vw;
+    grid-template-columns: max-content 1fr 3.1vw 3.1vw 3.5vw;
     grid-template-rows: 1fr;
     grid-template-areas: "album-title . icon-like time icon-dots";
     align-items: center;
+    justify-content: center;
+    justify-items: center;
 }
 
 .album-title {
     grid-area: album-title;
     font-size: 16px;
     font-weight: normal;
+    cursor: pointer;
+}
+.album-title:hover{
+    color: white;
+    text-decoration: underline;
 }
 
 .song-right .icon-like {
@@ -138,6 +147,11 @@ main {
 
 .icon-dots{
     grid-area: icon-dots;
+}
+
+.icon-dots:hover{
+    color: white;
+    text-decoration: underline;
 }
 
 .next{
