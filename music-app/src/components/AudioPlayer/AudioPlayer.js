@@ -135,30 +135,30 @@ class AudioPlayer extends Component {
                     volume={volume}
                     loop={loop}
                 />
+                
+                <div className="hochu-umeret">
+                <span className="icon-shuffle-1-svgrepo-com ic"><div className='overlay-shuffle rs'><p>Enable shuffle</p></div></span>
+                <span className="icon-play-and-pause ic"><div className='overlay-play-and-pause rs'><p>Previous</p></div></span>
 
-                <span className="icon-shuffle-1-svgrepo-com"></span>
-                <span className="icon-play-and-pause"></span>
+                <span className="icon-play-circle ic" onClick={this.onClickPlayButton}>
+                        <div className='overlay-play rs'><p>Play</p></div>
+                </span>
 
-                <span
-                    className="icon-play-circle"
-                    onClick={this.onClickPlayButton}
-                />
+                <span className="icon-play-and-pause2 ic"><div className='overlay-play-and-pause2 rs'><p>Next</p></div></span>
 
-                <span className="icon-play-and-pause2"></span>
-
-                <span
-                    className="icon-repeat-one"
-                    onClick={this.onClickLoopButton}
-                />
+                <span className="icon-repeat-one ic" onClick={this.onClickLoopButton}>
+                <div className='overlay-repeat rs'><p>Enable repeat</p></div>
+                </span>
+                </div>
 
 
 
                 <div id="music-line">
 
-                    {this.millisToTimeString(currentTrackPlayPositionMillis)}
+                   <div className="time-left"> {this.millisToTimeString(currentTrackPlayPositionMillis)} </div>
 
-                    <SliderRange max={currentTrackLengthMillis} value={currentTrackPlayPositionMillis} onInput={this.onTrackSearch} />
-                    {this.millisToTimeString(currentTrackLengthMillis)}
+                    <SliderRange className="slider-center" max={currentTrackLengthMillis} value={currentTrackPlayPositionMillis} onInput={this.onTrackSearch} />
+                   <div className="time-right"> {this.millisToTimeString(currentTrackLengthMillis)} </div>
                 </div>
             </>
         )

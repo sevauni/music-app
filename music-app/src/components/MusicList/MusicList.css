@@ -4,6 +4,8 @@ main {
     color: white;
     padding: 2vw;
     display: grid;
+    height: 100%;
+    overflow: auto;
     grid-template-columns: 1fr;
     grid-template-rows: 200px 1fr;
     grid-template-areas: "main-header"
@@ -72,73 +74,6 @@ main {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.song-left {
-    grid-area: song-left;
-    display: grid;
-    grid-template-columns: 20px 5vw max-content 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "icon-play current-song-player np-song-title ."
-        "icon-play current-song-player np-band-name .";
-    align-items: center;
-}
-
-
-.icon-play {
-    color: white;
-    font-size: 14px;
-    grid-area: icon-play;
-}
-
-.current-song-player {
-    width: 3vw;
-    height: 3vw;
-    background: white;
-    grid-area: current-song-player;
-    margin: 0 10px;
-}
-
-.np-song-title {
-    grid-area: np-song-title;
-    font-size: 16px;
-    color: white;
-    font-weight: normal;
-}
-
-.np-band-name {
-    grid-area: np-band-name;
-    font-weight: normal;
-    font-size: 16px;
-}
-
-.song-right {
-    grid-area: song-right;
-    display: grid;
-    grid-template-columns: max-content 1fr 3vw 3vw 3vw;
-    grid-template-rows: 1fr;
-    grid-template-areas: "album-title . icon-like time icon-dots";
-    align-items: center;
-}
-
-.album-title {
-    grid-area: album-title;
-    font-size: 16px;
-    font-weight: normal;
-}
-
-.song-right .icon-like {
-    font-size: 1.5vw;
-    grid-area: icon-like;
-}
-
-.time{
-    font-size: 16px;
-    font-weight: normal;
-    grid-area: time;
-}
-
-.icon-dots{
-    grid-area: icon-dots;
-}
 
 .next{
     grid-area: next;
@@ -156,15 +91,3 @@ main {
     grid-row-gap: 4px;
 }
 
-.song-line{
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "song-left song-right";
-    padding: 0.5vw 1vw;
-    border-radius: 3px;
-}
-
-.song-line:hover{
-    background-color: rgba(255, 255, 255, 0.1);
-}
