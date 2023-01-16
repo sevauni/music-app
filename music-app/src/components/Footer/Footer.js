@@ -30,12 +30,6 @@ class Footer extends Component {
         }
     }
 
-
-
-
-
-
-
     onMute = () => {
         this.setState(
             {
@@ -44,20 +38,62 @@ class Footer extends Component {
         );
     }
 
+    leftCornerRender(tracksInfo) {
+        if (this.props.info.tracksInfo !== null) {
+            const { albumName, author, duration, trackName, icon } = this.props.info.tracksInfo[this.props.info.status.currentTrackId];
+            return (
+                <div className='left-part'>
+                    <div className='current-song'>
+                        <img src={icon} width="100%" alt={trackName} />
+                    </div>
+                    <div className='song-title'>{trackName}</div>
+                    <div className='band-name'>{author}</div>
+                    <span className="icon-like">
+                        <div className='overlay-like'>
+                            <p>Save to Your Library</p>
+                        </div>
+                    </span>
+                </div>
+            )
+
+
+
+
+        } else {
+            return (
+                <div className='left-part'>
+                    <div className='current-song'>
+                    </div>
+                    <div className='song-title'></div>
+                    <div className='band-name'></div>
+                    <span className="icon-like">
+                        <div className='overlay-like'>
+                            <p>Save to Your Library</p>
+                        </div>
+                    </span>
+                </div>
+            )
+
+
+        }
+
+
+
+
+
+    }
+
     render() {
+
 
         const { volume, mute } = this.state;
         const showVolume = !mute ? volume : 0;
+        const leftPart = this.leftCornerRender(this.props.info.tracksInfo);
 
         return (
             <footer className="footer">
-                
-                <div className='left-part'>
-                    <div className='current-song'></div>
-                    <div className='song-title'>Song Title</div>
-                    <div className='band-name'>Band Name</div>
-                    <span className="icon-like"><div className='overlay-like'><p>Save to Your Library</p></div></span>
-                </div>
+
+                {leftPart}
                 <div className='center-part'>
                     <AudioPlayer volume={volume} mute={mute} />
                 </div>

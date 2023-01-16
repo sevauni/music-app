@@ -214,7 +214,7 @@ justify-items: center;
   display: grid;
   grid-template-columns: 2fr 5fr 2fr;
   grid-template-rows: 4vw 1fr;
-  grid-template-areas: ". hochu-umeret ."
+  grid-template-areas: ". icons-player-align ."
     "music-line music-line music-line";
   align-items: center;
   align-content: center;
@@ -224,8 +224,8 @@ justify-items: center;
 
 
 
-.hochu-umeret{
-  grid-area: hochu-umeret;
+.icons-player-align{
+  grid-area: icons-player-align;
   display: grid;
   grid-template-columns: 1fr 1fr 1.2fr 1fr 1fr ;
   grid-template-rows: 1fr;

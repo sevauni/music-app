@@ -136,7 +136,7 @@ class AudioPlayer extends Component {
                     loop={loop}
                 />
                 
-                <div className="hochu-umeret">
+                <div className="icons-player-align">
                 <span className="icon-shuffle-1-svgrepo-com ic"><div className='overlay-shuffle rs'><p>Enable shuffle</p></div></span>
                 <span className="icon-play-and-pause ic"><div className='overlay-play-and-pause rs'><p>Previous</p></div></span>
 

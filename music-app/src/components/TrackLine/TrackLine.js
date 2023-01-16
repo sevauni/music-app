@@ -2,21 +2,32 @@ import React, { Component } from 'react';
 import './TrackLine.css';
 
 
+
+
+
 class TrackLine extends Component {
+
+
     render() {
+
+
+        const { albumName, author, duration, trackName, icon } = this.props.info;
         return (
             <div className="song-line">
                 <div className="song-left">
-                    <span class="icon-play"></span>
-                    <div className='current-song-player'></div>
-                    <div className='np-song-title'>Song Title</div>
-                    <div className='np-band-name'>Band Name</div>
+                    <span className="icon-play"></span>
+                    <div className='current-song-player'>
+                        <img src={icon} width="100%" alt={trackName} />
+                    </div>
+
+                    <div className='np-song-title'>{trackName}</div>
+                    <div className='np-band-name'>{author}</div>
                 </div>
                 <div className="song-right">
-                    <div className="album-title">Album Title</div>
-                    <span class="icon-like"></span>
-                    <div className="time">3:08</div>
-                    <span class="icon-dots"></span>
+                    <div className="album-title">{albumName}</div>
+                    <span className="icon-like"></span>
+                    <div className="time">{duration}</div>
+                    <span className="icon-dots"></span>
                 </div>
             </div>
         );

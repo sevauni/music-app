@@ -3,40 +3,38 @@ import './MusicList.css';
 import TrackLine from '../TrackLine/TrackLine';
 
 import React, { Component } from 'react';
-import LoaderService from '../LoadService/LoadService';
+
 
 import './MusicList.css';
 
 class MusicList extends Component {
 
   state = {
-    tracksLoaded: false
+    tracksLoaded: false,
+    tracksInfo: null
   }
 
-
-  loaderService = new LoaderService('http://localhost:3004/');
-
-  componentDidMount() {
-
-    if (!this.state.tracksLoaded) {
-      this.loaderService.getTrackList('tracks')
-        .then(result => {
-          console.log(result);
-          this.setState(
-            {
-              tracksLoaded: true
-            }
-          );
-        });
-    }
-  }
 
 
 
 
   render() {
 
+    const { tracksInfo } = this.props.info;
 
+    let trackList = null;
+    let trackFirst = null;
+
+    if (tracksInfo !== null) {
+      trackFirst = <TrackLine info={tracksInfo[0]} key='trackIdList-0' />
+
+      trackList = tracksInfo.map((item, index) => {
+        if (index === 0) return null;
+        return (
+          <TrackLine key={`trackIdList-${index}`} info={tracksInfo[index]} />
+        )
+      });
+    }
 
     return (
       <main className="main">
@@ -44,8 +42,7 @@ class MusicList extends Component {
           <div className='header-queue'>Queue</div>
           <div className='now-playng'>
             <div className='np-title'>Now playng</div>
-            <TrackLine/>
-           
+            {trackFirst}
           </div>
         </div>
         <div className='main-body'>
@@ -54,8 +51,7 @@ class MusicList extends Component {
             <span className='current-song-title'>Current Song</span>
           </div>
           <div className='list-of-songs'>
-           <TrackLine/>
-            
+            {trackList}
           </div>
         </div>
       </main>
