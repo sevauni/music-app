@@ -30,12 +30,16 @@ class App extends Component {
           }
         );
       })
-      .catch(console.log("Fetch Catch"));
+      .catch();
   }
 
 
   onTrackChange = (nextTrack) => {
 
+    if(nextTrack > this.state.tracksInfo.length -1) nextTrack = 0;
+    if(nextTrack < 0) nextTrack = this.state.tracksInfo.length -1;
+
+    console.log(nextTrack);
     this.setState(
       {
         currentTrackId: nextTrack,
@@ -45,15 +49,23 @@ class App extends Component {
   }
 
 
-  onPlayChange = () => {
-    this.setState(
-      {
+  onPlayChange = (forceStatus = false) => {
+    forceStatus = Boolean(Number(forceStatus));
+    if (forceStatus) {
+      this.setState(
+        {
+          currentStatus: true
+        }
+      );
+    } else {
+      this.setState(
+        {
+          currentStatus: !this.state.currentStatus
+        }
+      );
+    }
 
 
-        currentStatus: !this.state.currentStatus
-
-      }
-    );
 
   }
 
@@ -68,7 +80,7 @@ class App extends Component {
         </div>
         <MusicList info={this.state} onTrackChange={this.onTrackChange} onPlayChange={this.onPlayChange} />
         <SideBar />
-        <Footer info={this.state} onTrackChange={this.onTrackChange} onPlayChange={this.onPlayChange}/>
+        <Footer info={this.state} onTrackChange={this.onTrackChange} onPlayChange={this.onPlayChange} />
       </div>
 
     );

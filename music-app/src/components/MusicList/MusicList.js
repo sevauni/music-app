@@ -19,14 +19,18 @@ class MusicList extends Component {
 
 
   render() {
-
+    //console.log(this.props)
     const { tracksInfo, currentTrackId } = this.props.info;
     let trackList = null;
     let trackFirst = null;
     if (tracksInfo !== null) {
+
+
+
       trackFirst = <TrackLine trackId="0" info={tracksInfo[currentTrackId]} key='trackIdList-0' onTrackChange={this.props.onTrackChange} onPlayChange={this.props.onPlayChange} first />
 
       trackList = tracksInfo.map((item, index) => {
+        if (currentTrackId === index) return null;
         return (
           <TrackLine trackId={index} key={`trackIdList-${index}`} info={tracksInfo[index]} onTrackChange={this.props.onTrackChange} onPlayChange={this.props.onPlayChange} />
         )
@@ -34,7 +38,7 @@ class MusicList extends Component {
     }
 
     return (
-      <main className="main">
+      <main className="main" >
         <div className='main-header'>
           <div className='header-queue'>Queue</div>
           <div className='now-playng'>

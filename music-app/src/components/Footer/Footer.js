@@ -37,7 +37,7 @@ class Footer extends Component {
 
     leftCornerRender(tracksInfo) {
         if (this.props.info.tracksInfo !== null) {
-            const { author,  trackName, icon } = this.props.info.tracksInfo[this.props.info.currentTrackId];
+            const { author, trackName, icon } = this.props.info.tracksInfo[this.props.info.currentTrackId];
             return (
                 <div className='left-part'>
                     <div className='current-song'>
@@ -81,24 +81,30 @@ class Footer extends Component {
     }
 
     render() {
-
         const { volume, mute } = this.state;
         const { info } = this.props;
         const showVolume = !mute ? volume : 0;
         const leftPart = this.leftCornerRender(this.props.info.tracksInfo);
-
         return (
             <footer className="footer">
 
                 {leftPart}
                 <div className='center-part'>
-                    <AudioPlayer volume={volume} mute={mute} info={info} onTrackChange={this.props.onTrackChange} onPlayChange={this.props.onPlayChange}/>
+                    <AudioPlayer
+                        volume={volume}
+                        mute={mute}
+                        info={info}
+                        onTrackChange={this.props.onTrackChange}
+                        onPlayChange={this.props.onPlayChange}
+                    />
                 </div>
                 <RightPart
                     onVolumeChange={this.onVolumeChange}
                     volumeValue={showVolume}
                     onVolumeMute={this.onMute}
-                    volumeMuteValue={false} />
+                    volumeMuteValue={false}
+                    mute = {mute} />
+                    
             </footer>
         );
     }

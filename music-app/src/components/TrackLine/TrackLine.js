@@ -25,7 +25,7 @@ class TrackLine extends Component {
                             this.props.onPlayChange(this.props.trackId);
                         } else {
                             this.props.onTrackChange(this.props.trackId);
-                            this.props.onPlayChange(this.props.trackId);
+                            this.props.onPlayChange(true);
                         }
                     }
                     }
