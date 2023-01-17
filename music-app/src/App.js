@@ -42,8 +42,6 @@ class App extends Component {
 
     if (nextTrack > this.state.tracksInfo.length - 1) nextTrack = 0;
     if (nextTrack < 0) nextTrack = this.state.tracksInfo.length - 1;
-
-    console.log(nextTrack);
     this.setState(
       {
         currentTrackId: nextTrack,
