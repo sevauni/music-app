@@ -14,30 +14,34 @@ class App extends Component {
   state = {
     tracksInfo: null,
     currentTrackId: 0,
-    currentStatus: false
+    currentStatus: false,
+    infoLoaded: false
   }
 
-  loaderService = new LoaderService('http://localhost:3004/');
+  loaderService = new LoaderService('http://localhost:3000/');
 
   componentDidMount() {
-    this.loaderService.getTrackList('tracks')
-      .then(result => {
+    if (this.state.infoLoaded === false) {
+      this.loaderService.getTrackList('tracks.json')
+        .then(result => {
+          this.setState(
+            {
+              tracksLoaded: true,
+              tracksInfo: result,
+              infoLoaded: true
+            }
+          );
+        })
+        .catch();
 
-        this.setState(
-          {
-            tracksLoaded: true,
-            tracksInfo: result
-          }
-        );
-      })
-      .catch();
+    }
   }
 
 
   onTrackChange = (nextTrack) => {
 
-    if(nextTrack > this.state.tracksInfo.length -1) nextTrack = 0;
-    if(nextTrack < 0) nextTrack = this.state.tracksInfo.length -1;
+    if (nextTrack > this.state.tracksInfo.length - 1) nextTrack = 0;
+    if (nextTrack < 0) nextTrack = this.state.tracksInfo.length - 1;
 
     console.log(nextTrack);
     this.setState(

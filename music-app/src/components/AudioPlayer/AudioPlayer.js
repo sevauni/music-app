@@ -92,7 +92,7 @@ class AudioPlayer extends Component {
             const { path } = this.props.info.tracksInfo[this.props.info.currentTrackId];
             return path;
         }
-        return null;
+        return "./music.mp3";
     }
 
 
@@ -117,13 +117,10 @@ class AudioPlayer extends Component {
         } = this.state;
 
         const { currentTrackId } = this.props.info;
-        //console.log(currentTrackId);
         let volume = this.props.mute ? 0 : this.props.volume;
         const playStatus = this.boolToStatus(this.props.info.currentStatus);
-        const path = this.getAudioPath();
         const playButtonClass = this.props.info.currentStatus ? 'icon-pause-circle ic' : 'icon-play-circle ic';
-//icon-pause-circle icon-play-circle
-
+        const path = this.getAudioPath();
 
         return (
             <>
@@ -136,7 +133,8 @@ class AudioPlayer extends Component {
                     onPlaying={this.onTrackPlaying}
                     volume={volume}
                     loop={loop}
-                    onFinishedPlaying={e=>{this.props.onTrackChange(currentTrackId + 1)}}
+                    onFinishedPlaying={e => { this.props.onTrackChange(currentTrackId + 1) }}
+                    onError= {()=>{}}
                 />
 
                 <div className="icons-player-align">
@@ -164,12 +162,12 @@ class AudioPlayer extends Component {
                     >
                         <div className='overlay-play rs'><p>Play</p></div></span>
 
-                    <span 
-                                           onClick={e => {
-                                            this.props.onPlayChange(true);
-                                            this.props.onTrackChange(currentTrackId + 1);
-                                        }}
-                    className="icon-play-and-pause2 ic"><div className='overlay-play-and-pause2 rs'><p>Next</p></div></span>
+                    <span
+                        onClick={e => {
+                            this.props.onPlayChange(true);
+                            this.props.onTrackChange(currentTrackId + 1);
+                        }}
+                        className="icon-play-and-pause2 ic"><div className='overlay-play-and-pause2 rs'><p>Next</p></div></span>
 
                     <span className="icon-repeat-one ic" onClick={this.onClickLoopButton}>
                         <div className='overlay-repeat rs'><p>Enable repeat</p></div>

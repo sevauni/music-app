@@ -8,7 +8,15 @@ import './TrackLine.css';
 class TrackLine extends Component {
 
 
+
     render() {
+        let playIconClass;
+        if (!this.props.first) {
+            playIconClass = 'icon-play';
+        } else {
+            playIconClass = (this.props.playStatus) ? 'icon-pause' : 'icon-play';
+        }
+
         const { albumName, author, duration, trackName, icon } = this.props.info;
         return (
             <div className="song-line" onClick={() => {
@@ -29,7 +37,7 @@ class TrackLine extends Component {
                         }
                     }
                     }
-                        className="icon-play"></span>
+                        className={playIconClass}></span>
                     <div className='current-song-player'>
                         <img src={icon} width="100%" alt={trackName} />
                     </div>
