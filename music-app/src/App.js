@@ -78,8 +78,8 @@ class App extends Component {
         <Navigation />
         <div className='logo'>
           <a href="/#"><img src="./music-bars-svgrepo-com-white.svg" className="img-logo" alt="logo"></img></a>
-          <a href="/#"><div>Music</div></a>
-        </div>
+          <a href="/#"><div className='music'  >Music</div></a>
+        </div> 
         <MusicList info={this.state} onTrackChange={this.onTrackChange} onPlayChange={this.onPlayChange} />
         <SideBar />
         <Footer info={this.state} onTrackChange={this.onTrackChange} onPlayChange={this.onPlayChange} />

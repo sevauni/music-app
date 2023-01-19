@@ -1,35 +1,35 @@
 nav {
+    height: 100vh;
     color: #b2b2b2;
     background: #000000;
     font-weight: bolder;
-    padding-left: 1.2vw;
+    padding-left: 1rem;
     grid-area: nav;
     display: grid;
-    grid-template-rows: repeat(2, 15vh);
-    grid-row-gap: 10vh;
+    grid-template-rows: repeat(2, 9rem);
+    grid-row-gap: 2.9rem;
     align-content: flex-start;
     align-items: flex-start;
-    padding-top: 4vh;
+    padding-top: 1.5rem;
 
 }
 
 nav a .ic {
-    font-size: 1.8vw;
-    margin-right: 1vw;
+    font-size: 1.5rem;
+    margin-right: 0.8rem;
 }
 
 nav a {
     text-decoration: none;
     color: #b2b2b2;
-    padding: 0.7vh 1vh;
-    margin-right: 1.5vh;
+    padding: 0.3rem 0.5rem;
 }
 
 
 
 .main-nav {
     display: grid;
-    grid-template-rows: repeat(3, 7vh);
+    grid-template-rows: repeat(3, 2.8rem);
 }
 
 .main-nav a:hover {
@@ -53,7 +53,7 @@ nav a {
 
 .dop-nav {
     display: grid;
-    grid-template-rows: repeat(2, 7vh);
+    grid-template-rows: repeat(2, 2.8rem);
 }
 
 .dop-nav a:hover {
