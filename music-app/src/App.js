@@ -10,7 +10,7 @@ function App() {
       <Navigation />
       <div className='logo'>
         <a href="/#"><img  className='img-logo' src="./music-bars-svgrepo-com-white.svg" alt="logo"></img></a>
-        <a href="/#"><div>Music</div></a>
+        <a href="/#"><div className='music'>Music</div></a>
       </div>
       <MusicList />
       <SideBar />

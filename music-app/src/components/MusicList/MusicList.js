@@ -13,7 +13,6 @@ class MusicList extends Component {
           <div className='now-playng'>
             <div className='np-title'>Now playng</div>
             <TrackLine/>
-           
           </div>
         </div>
         <div className='main-body'>
