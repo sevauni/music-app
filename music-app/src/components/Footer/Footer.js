@@ -45,11 +45,7 @@ class Footer extends Component {
                     </div>
                     <div className='song-title'>{trackName}</div>
                     <div className='band-name'>{author}</div>
-                    <span className="icon-like">
-                        <div className='overlay-like'>
-                            <p>Save to Your Library</p>
-                        </div>
-                    </span>
+                    <span className="icon-like"></span>
                 </div>
             )
 
@@ -63,11 +59,7 @@ class Footer extends Component {
                     </div>
                     <div className='song-title'></div>
                     <div className='band-name'></div>
-                    <span className="icon-like">
-                        <div className='overlay-like'>
-                            <p>Save to Your Library</p>
-                        </div>
-                    </span>
+                    <span className="icon-like"></span>
                 </div>
             )
 

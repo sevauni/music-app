@@ -1,24 +1,52 @@
 header{
     background-color: #181818;
     grid-area: header;
-    padding: 2vw;
-    display: flex;
-    flex-direction: row;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "arrow  buttonsH";
     justify-content: space-between;
     align-content: center;
     align-items: center;
+    grid-column-gap: 30rem;
   }
   header img{
-      width: 1.3vw; 
+      width: 1.1rem; 
   }
 
+  .buttonsH{
+    grid-area: buttonsH;
+    display: grid;
+    grid-template-columns: 1fr 7.5rem;
+    grid-template-rows: 1fr;
+    grid-template-areas: "git-buttons login";
+    grid-column-gap: 4rem;
+    align-items: center;
+  }
+  .git-buttons{
+    grid-area: git-buttons;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "gitD gitS";
+    grid-column-gap: 2rem;
+  }
+  .gitD{
+    grid-area: gitD;
+  }
+  .gitS{
+    grid-area: gitS;
+  }
+  
 
   .arrow-nav{
-    width: 80px;
+    width: 5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    grid-area: arrow;
 }
 .arrow{
     width: 30px;
@@ -40,18 +68,24 @@ header{
     cursor: not-allowed;
 }
 
-
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+}
 .buttons button{
-    width: 120px;
-    height: 40px;
+    width: 6.9rem;
+    height: 2.3rem;
     border-radius: 20px;
     border: none;
     letter-spacing: 1px;
     cursor: pointer;
     background: white;
+    grid-area: login;
+
 }
 .buttons button:hover{
-    width: 125px;
-    height: 43px;
+    width: 7rem;
+    height: 2.4rem;
+    font-size: 0.9rem;
 }
 
