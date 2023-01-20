@@ -13,8 +13,8 @@ A fully interactive online music player built with React.
 - Fully functional demo app
 
 ## Technologies
+- JS
 - React
-- Fetch
 - SCSS
 
 ## Collaboration
