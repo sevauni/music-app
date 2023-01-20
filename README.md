@@ -19,3 +19,8 @@ A fully interactive online music player built with React.
 
 ## Collaboration
 This project was created in collaboration with [DariaBab](https://github.com/DariaBab).
+
+
+## Data Sources
+- https://www.no-copyright-music.com/
+- https://gratisography.com/
