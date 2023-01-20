@@ -138,11 +138,7 @@ class AudioPlayer extends Component {
                 />
 
                 <div className="icons-player-align">
-                    <span className="icon-shuffle-1-svgrepo-com ic">
-                        <div className='overlay-shuffle rs'>
-                            <p className='tips-font'>Enable shuffle</p>
-                        </div>
-                    </span>
+                    <span className="icon-shuffle-1-svgrepo-com ic"></span>
 
                     <span
                         className="icon-play-and-pause ic"
@@ -152,7 +148,7 @@ class AudioPlayer extends Component {
                             this.props.onTrackChange(currentTrackId - 1);
                         }}
                     >
-                        <div className='overlay-play-and-pause rs'><p className='tips-font'>Previous</p></div></span>
+                    </span>
 
                     <span
                         className={playButtonClass}
@@ -160,18 +156,16 @@ class AudioPlayer extends Component {
                             this.props.onPlayChange();
                         }}
                     >
-                        <div className='overlay-play rs'><p className='tips-font' >Play</p></div></span>
+                    </span>
 
                     <span
                         onClick={e => {
                             this.props.onPlayChange(true);
                             this.props.onTrackChange(currentTrackId + 1);
                         }}
-                        className="icon-play-and-pause2 ic"><div className='overlay-play-and-pause2 rs'><p className='tips-font' >Next</p></div></span>
+                        className="icon-play-and-pause2 ic"></span>
 
-                    <span className="icon-repeat-one ic" onClick={this.onClickLoopButton}>
-                        <div className='overlay-repeat rs'><p className='tips-font' >Enable repeat</p></div>
-                    </span>
+                    <span className="icon-repeat-one ic" onClick={this.onClickLoopButton}></span>
                 </div>
 
 

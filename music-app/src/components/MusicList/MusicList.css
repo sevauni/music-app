@@ -5,7 +5,7 @@ main {
     padding: 1.2rem 1.5rem;
     display: grid;
     height: 100vh;
-    overflow: auto;
+
     grid-template-columns: 1fr;
     grid-template-rows: 12.5rem 1fr;
     grid-template-areas: "main-header"
@@ -97,7 +97,7 @@ main {
 .list-of-songs{
     grid-area: list-of-song;
     display: grid;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(5, max-content);
     grid-template-columns: 1fr;
     grid-row-gap: 4px;
 }

@@ -1,126 +1,41 @@
 
-.overlay-like p{
-  margin-top: 4px;
-}
  
-.overlay-like{
-  display:none;
-  position: absolute;
-  bottom: 85px;
-  left: 140px;
-  color:white;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.4) 0px 15px 12px;
-  background: #292929;
-  font-size: 14px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  font-weight: lighter;
-  width: 150px;
-  height: 25px;
-  border-radius: 5px;
-  text-align: center;
-}
-  
-.icon-like:hover .overlay-like{
-  display: block;
-} 
-  
 .icon-like:hover{
   color: white;
 }
+  
 
-
-  
-.rs{
-  display:none;
-  position: absolute;
-  bottom: 85px;
-  color:white;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.4) 0px 15px 12px;
-  background: #292929;
-  font-size: 14px;
-  font-weight: lighter;
-  height: 25px;
-  border-radius: 5px;
-  text-align: center;
-  padding: 4px 10px;
-}
-  
-.icon-microphone:hover .overlay-microphone{
-  display: block;
-  right: 216px;
-}
-  
-.icon-queue:hover .overlay-queue{
-  display: block;
-  right: 180px;
-}
-.icon-laptop:hover .overlay-laptop{
-  display: block;
-  right: 90px;
-}
-  
-.icon-sound-min:hover .overlay-sound-min{
-  display: block;
-  right: 110px;
-}
-  
-.icon-shuffle-1-svgrepo-com:hover .overlay-shuffle{
-  display: block;
-  left: 530px;
-}
-
-  
-.icon-play-and-pause:hover .overlay-play-and-pause{
-  display: block;
-  left: 600px;
-}
-
-  
-.icon-play-and-pause2:hover .overlay-play-and-pause2{
-  display: block;
-  left: 726px;
-}
-
-  
-.icon-play-circle:hover .overlay-play{
-  display: block;
-  left: 670px;
-}
 .icon-pause-circle{
   grid-area: icon-play-circle;
   color: #b2b2b2;
-  font-size: 3.3vw;
+  font-size: 2.4rem;
 }
 
 .icon-pause-circle:hover{
-font-size: 3.4vw;
+font-size: 2.5rem;
 }
-
-  
-.icon-repeat-one:hover .overlay-repeat{
-  display: block;
-  left: 760px;
-}
-
-
 
   
 footer{
-  min-width: 100%;
-  min-height: 20%; 
+  width: 100vw;
+  height: 6.3rem; 
   position: fixed;
   bottom: 0;
   padding: 1.5vw;
   background-color:#181818;   
   color: #b2b2b2;
   grid-area: footer;
-  display:flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+ grid-template-rows: 1fr;
+ grid-template-areas: "left-part center-part right-part";
+ grid-column-gap: 8rem;
+  justify-items: center;
   align-content: center;
 }
   
 .left-part{
+  grid-area: left-part;
     width: 17rem;
     display: grid;
     grid-template-columns: minmax(3rem, 3.8rem) max-content minmax(1rem, 1.3rem);
@@ -174,6 +89,7 @@ footer{
 
   
 .right-part{
+  grid-area: right-part;
     width: 15.5rem;
     display: grid;
     grid-template-columns: minmax(1.2rem, 1.5rem) minmax(1.2rem, 1.5rem) minmax(1.2rem, 1.5rem) minmax(8rem,8.5rem);
@@ -190,7 +106,7 @@ footer{
   
 .right-part span:hover{
     color: white;
-    font-size: 1.6vw;
+    font-size: 1.4rem;
 }
 
 
@@ -211,7 +127,8 @@ footer{
 
 
 .center-part {
-  width: 37vw;
+  grid-area: center-part;
+  width: 28rem;
   display: grid;
   grid-template-columns: 2fr 5fr 2fr;
   grid-template-rows: 4vw 1fr;
@@ -242,32 +159,32 @@ footer{
 .icon-shuffle-1-svgrepo-com{
     grid-area: icon-shuffle-1-svgrepo-com;
     color: #b2b2b2;
-    font-size: 1.5vw;
+    font-size: 1.3rem;
 }
   
 .icon-play-and-pause{
     grid-area: icon-play-and-pause;
     color: #b2b2b2;
-    font-size: 1.5vw;
+    font-size: 1.3rem;
 }
   
 .icon-play-circle{
     grid-area: icon-play-circle;
     color: #b2b2b2;
-    font-size: 3.3vw;
+    font-size: 2.4rem;
 }
 
   
 .icon-play-and-pause2{
     grid-area: icon-play-and-pause2;
     color: #b2b2b2;
-    font-size: 1.5vw;
+    font-size:1.3rem;
 } 
   
 .icon-repeat-one{
     grid-area: icon-repeat-one;
     color: #b2b2b2;
-    font-size: 2vw;
+    font-size: 1.8rem;
 }
 
   
@@ -277,7 +194,7 @@ color: white;
 
   
 .icon-play-circle:hover{
-  font-size: 3.4vw;
+  font-size: 2.5rem;
 }
 
 

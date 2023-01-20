@@ -3,18 +3,42 @@ header{
     grid-area: header;
     padding: 1.5rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "arrow login";
+    grid-template-areas: "arrow  buttonsH";
     justify-content: space-between;
     align-content: center;
     align-items: center;
-    grid-column-gap: 35rem;
+    grid-column-gap: 30rem;
   }
   header img{
       width: 1.1rem; 
   }
 
+  .buttonsH{
+    grid-area: buttonsH;
+    display: grid;
+    grid-template-columns: 1fr 7.5rem;
+    grid-template-rows: 1fr;
+    grid-template-areas: "git-buttons login";
+    grid-column-gap: 4rem;
+    align-items: center;
+  }
+  .git-buttons{
+    grid-area: git-buttons;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "gitD gitS";
+    grid-column-gap: 2rem;
+  }
+  .gitD{
+    grid-area: gitD;
+  }
+  .gitS{
+    grid-area: gitS;
+  }
+  
 
   .arrow-nav{
     width: 5rem;
