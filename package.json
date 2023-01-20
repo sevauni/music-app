@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "react-github-btn": "^1.4.0",
     "react-range-slider-input": "^3.0.7"
   }
 }
