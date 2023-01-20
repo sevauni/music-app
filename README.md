@@ -14,7 +14,8 @@ A fully interactive online music player built with React.
 
 ## Technologies
 - React
-- Open sources
+- Fetch
+- SCSS
 
 ## Collaboration
 This project was created in collaboration with @dariabab.
