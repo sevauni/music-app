@@ -1,0 +1,65 @@
+[
+        {
+            "id": 1,
+            "trackName": "Modern Epic Music",
+            "author": "Antonio",
+            "albumName": "Free Epic Music",
+            "path": "./tracks/music (1).mp3",
+            "duration": "3:10",
+            "icon": "./icons/icon (1).jpg"
+        },
+        {
+            "id": 2,
+            "trackName": "Whatever It Takes",
+            "author": "David Je",
+            "albumName": "Job Search",
+            "path": "./tracks/music (2).mp3",
+            "duration": "3:24",
+            "icon": "./icons/icon (2).jpg"
+        },
+        {
+            "id": 3,
+            "trackName": "Get To You",
+            "author": "Hire me!",
+            "albumName": "Free Epic Music",
+            "path": "./tracks/music (3).mp3",
+            "duration": "2:53",
+            "icon": "./icons/icon (3).jpg"
+        },
+        {
+            "id": 4,
+            "trackName": "I Need You Now",
+            "author": "Vsevolod U",
+            "albumName": "Self-taught programmer",
+            "path": "./tracks/music (4).mp3",
+            "duration": "4:02",
+            "icon": "./icons/icon (4).jpg"
+        },
+        {
+            "id": 5,
+            "trackName": "It's a Beatiful Life",
+            "author": "Daria B",
+            "albumName": "Seeking to use",
+            "path": "./tracks/music (5).mp3",
+            "duration": "3:22",
+            "icon": "./icons/icon (5).jpg"
+        },
+        {
+            "id": 6,
+            "trackName": "Save Me!",
+            "author": "Natalie",
+            "albumName": "My existing skills",
+            "path": "./tracks/music (6).mp3",
+            "duration": "3:07",
+            "icon": "./icons/icon (6).jpg"
+        },
+        {
+            "id": 7,
+            "trackName": "Run Away",
+            "author": "Nachon",
+            "albumName": "React & JS",
+            "path": "./tracks/music (7).mp3",
+            "duration": "2:58",
+            "icon": "./icons/icon (7).jpg"
+        }
+    ]

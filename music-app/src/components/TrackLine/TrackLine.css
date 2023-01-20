@@ -1,0 +1,104 @@
+.song-line {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: max-content;
+    grid-template-areas: "song-left song-right";
+    padding: 0.4rem 0.8rem;
+    border-radius: 3px;
+    margin-bottom: 0.5rem;
+}
+
+.song-line:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.song-left {
+    grid-area: song-left;
+    display: grid;
+    grid-template-columns: 20px 4.5rem max-content 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "icon-play current-song-player np-song-title ."
+        "icon-play current-song-player np-band-name .";
+    align-items: center;
+}
+
+.icon-play {
+    color: white;
+    font-size: 14px;
+    grid-area: icon-play;
+    cursor: pointer;
+}
+
+.current-song-player {
+    width: 3rem;
+    height: 3rem;
+    background: white;
+    grid-area: current-song-player;
+    margin: 0 10px;
+}
+
+.np-song-title {
+    grid-area: np-song-title;
+    font-size: 16px;
+    color: white;
+    font-weight: normal;
+}
+
+.np-band-name {
+    grid-area: np-band-name;
+    font-weight: normal;
+    font-size: 16px;
+    color: #b2b2b2;
+    cursor: pointer;
+}
+
+.np-band-name:hover{
+color: white;
+text-decoration: underline;
+}
+
+.song-right {
+    grid-area: song-right;
+    display: grid;
+    grid-template-columns: max-content 1fr 2.5rem 2.5rem 2.7rem;
+    grid-template-rows: 1fr;
+    grid-template-areas: "album-title . icon-like time icon-dots";
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.song-right .icon-like {
+    font-size: 1.2rem;
+    grid-area: icon-like;
+    cursor: pointer;
+}
+
+.album-title {
+    grid-area: album-title;
+    font-size: 16px;
+    font-weight: normal;
+    cursor: pointer;
+    color: #b2b2b2;
+}
+
+.album-title:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.song-right .time {
+    font-size: 16px;
+    font-weight: normal;
+    grid-area: time;
+    color: #b2b2b2;
+}
+
+.icon-dots{
+    grid-area: icon-dots;
+    cursor: pointer;
+}
+
+.icon-dots:hover{
+    color: white;
+}
